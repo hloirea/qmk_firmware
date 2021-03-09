@@ -1,4 +1,4 @@
-#include "dz60.h"
+#include QMK_KEYBOARD_H
 
 enum LAYER_IDX {
   _BL = 0,
