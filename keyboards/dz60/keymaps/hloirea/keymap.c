@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_FL] =
       LAYOUT_60_ansi_split_bs_rshift(
          _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_INS,
-         MO(_NL), KC_VOLD, KC_MUTE, KC_VOLU, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_PSCR, KC_SLCK, KC_PAUS, _______,
+         MO(_NL), KC_VOLD, KC_MUTE, KC_VOLU, RGB_TOG, RGB_MOD, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_PSCR, KC_SLCK, KC_PAUS, _______,
          KC_CAPS, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, _______,
          _______, KC_APP,  _______, KC_CALC, _______, _______, _______, _______, _______, _______, _______, _______, _______,
          _______, _______, _______,                   _______,                   _______, _______, _______, _______),
@@ -53,20 +53,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, _______,
          xxxxxxx, _______, xxxxxxx,                   xxxxxxx,                   xxxxxxx, xxxxxxx, _______, xxxxxxx),
 };
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-  uint8_t layer = get_highest_layer(state);
-  // esc led
-  if (layer == _BL) {
-    gh60_esc_led_off();
-  } else if (layer == _FL || layer == _NL || layer == _ML) {
-    gh60_esc_led_on();
-  }
-  // fn led
-  if (layer == _CL) {
-    gh60_fn_led_on();
-  } else {
-    gh60_fn_led_off();
-  }
-  return state;
-}
