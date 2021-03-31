@@ -15,3 +15,6 @@ typedef enum tagTP_KEYCODE {
 #define _______ KC_TRNS
 #define xxxxxxx KC_NO
 #define LT_NLCK LT(_NL, KC_NLCK)
+
+#define RGB_SWR RGB_M_SW        // Swirl Animation alias
+#define RGB_SNK RGB_M_SN        // Snake Animation alias
