@@ -1,12 +1,12 @@
 #pragma once
 #include QMK_KEYBOARD_H
+#include "common.h"
 
-
-#define __BL_0__ KC_GESC,KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,KC_EQL, KC_GRV, KC_DEL
+#define __BL_0__ KC_GESC,KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,KC_EQL, S_F1,   KC_DEL
 #define __BL_1__ KC_TAB, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC,KC_RBRC,KC_BSLS
 #define __BL_2__ KC_BSPC,KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,KC_ENT
-#define __BL_3__ KC_LSFT,KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSFT,MO(_CL)
-#define __BL_4__ KC_LALT,MO(_FL),KC_LCTL,                        KC_SPC,                         KC_RCTL,KC_RGUI,KC_RALT
+#define __BL_3__ KC_LSPO,KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSPC,MO(_CL)
+#define __BL_4__ KC_LALT,MO(_FL),TP_LCTL,                        KC_SPC,                         TP_RCTL,KC_RGUI,KC_RALT
 
 #define __FL_0__ _______,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,KC_INS
 #define __FL_1__ MO(_NL),KC_VOLD,KC_MUTE,KC_VOLU,RGB_TOG,RGB_MOD,KC_HOME,KC_PGDN,KC_PGUP,KC_END, KC_PSCR,KC_SLCK,KC_PAUS,_______
