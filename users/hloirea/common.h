@@ -9,12 +9,16 @@ typedef enum tagLAYER_IDX{
 
 typedef enum tagTP_KEYCODE {
     TP_LCTL = SAFE_RANGE,
-    TP_RCTL
+    TP_RCTL,
+    TP_BSPC,
+    TP_ENT
 } TP_KEYCODE;
 
 #define _______ KC_TRNS
 #define xxxxxxx KC_NO
 #define LT_NLCK LT(_NL, KC_NLCK)
+#define MT_BSPC MT(MOD_LCTL, KC_BSPC)
+#define MT_ENT  MT(MOD_LCTL, KC_ENT)
 #define S_F1    S(KC_F1)
 
 #define RGB_SWR RGB_M_SW        // Swirl Animation alias
