@@ -20,6 +20,7 @@ typedef enum tagTP_KEYCODE {
 #define MT_BSPC MT(MOD_LCTL, KC_BSPC)
 #define MT_ENT  MT(MOD_LCTL, KC_ENT)
 #define S_F1    S(KC_F1)
+#define S_F2    S(KC_F2)
 
 #define RGB_SWR RGB_M_SW        // Swirl Animation alias
 #define RGB_SNK RGB_M_SN        // Snake Animation alias
