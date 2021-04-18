@@ -13,7 +13,7 @@
 #include "layout_60_tsangan.h"
 #define LAYOUT_hloirea_wrapper(...) LAYOUT_60_tsangan_hhkb(__VA_ARGS__)
 
-#elif defined (HLOIREA_LAYOUT_65_SHINAH)
-#include "layout_65_shinah.h"
+#elif defined (HLOIREA_LAYOUT_65_SIMPLE)
+#include "layout_65_simple.h"
 #define LAYOUT_hloirea_wrapper(...) LAYOUT_65_ansi_split_bs(__VA_ARGS__)
 #endif

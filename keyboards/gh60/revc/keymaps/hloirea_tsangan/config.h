@@ -1,2 +1,9 @@
 #define HLOIREA_LAYOUT_60_TSANGAN
 #define HLOIREA_KEYBOARD_GH60
+
+#ifndef DEBOUNCE
+#define DEBOUNCE 10
+#else
+#undef DEBOUNCE
+#define DEBOUNCE 10
+#endif
