@@ -1,8 +1,9 @@
 #pragma once
 typedef enum tagLAYER_IDX{
     _BL = 0,
-    _FL,
     _NL,
+    _FL,
+    _ML,
     _CL,
     _MAX_LAYER
 } LAYER_IDX;
@@ -16,7 +17,7 @@ typedef enum tagTP_KEYCODE {
 
 #define _______ KC_TRNS
 #define xxxxxxx KC_NO
-#define LT_NLCK LT(_NL, KC_NLCK)
+#define LT_NPAD LT(_NL, KC_TAB)
 #define MT_BSPC MT(MOD_LCTL, KC_BSPC)
 #define MT_ENT  MT(MOD_LCTL, KC_ENT)
 #define S_F1    S(KC_F1)
