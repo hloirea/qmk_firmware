@@ -3,7 +3,7 @@
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM 256
+#define TAPPING_TERM 200
 
 /* Mode-Tap Setting */
 #ifndef IGNORE_MOD_TAP_INTERRUPT
@@ -16,28 +16,43 @@
 #define PERMISSIVE_HOLD
 #endif
 
-#ifndef NO_AUTO_SHIFT_ALPHA
-#define NO_AUTO_SHIFT_ALPHA
-#endif
 
+#if 0
 /* Auto Shift Timeout */
 #ifdef AUTO_SHIFT_TIMEOUT
 #undef AUTO_SHIFT_TIMEOUT
 #endif
-#define AUTO_SHIFT_TIMEOUT 256
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 
 /* Disable Auto Shift Setup Mode */
 #ifndef AUTO_SHIFT_NO_SETUP
 #define AUTO_SHIFT_NO_SETUP
 #endif
 
+#ifndef NO_AUTO_SHIFT_ALPHA
+#define NO_AUTO_SHIFT_ALPHA
+#endif
+#endif
+
 /* Combo Setup */
-#define COMBO_COUNT 10
-#define COMBO_TERM  128
-#define EXTRA_SHORT_COMBOS
+#ifdef COMBO_COUNT
+#undef COMBO_COUNT
+#endif
+#define COMBO_COUNT 7
+#ifdef COMBO_TERM
+#undef COMBO_TERM
+#endif
+#define COMBO_TERM  96
+/* #define EXTRA_SHORT_COMBOS */
 
 /* Disable Quick Tap */
 #ifdef QUICK_TAP_TERM
 #undef QUICK_TAP_TERM
 #endif
 #define QUICK_TAP_TERM 0
+
+/* Oneshot */
+#ifdef ONESHOT_TIMEOUT
+#undef ONESHOT_TIMEOUT
+#endif
+#define ONESHOT_TIMEOUT 500
