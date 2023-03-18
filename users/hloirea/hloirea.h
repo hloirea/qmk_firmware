@@ -5,16 +5,11 @@
 #define HLOIREA_LAYER_LIST                      \
     HLOIREA_LAYER_FORMAT(BASE,   "Base")        \
     HLOIREA_LAYER_FORMAT(LOWER,  "Lower")       \
-    HLOIREA_LAYER_FORMAT(UPPER,  "Upper")       \
-    HLOIREA_LAYER_FORMAT(EMACS,  "Emacs")
+    HLOIREA_LAYER_FORMAT(UPPER,  "Upper")
 
 #define HLOIREA_TD_TAP_HOLD                     \
-    HLOIREA_TD_FORMAT(CUSTOM_0, LCBR,  RCBR)    \
-    HLOIREA_TD_FORMAT(CUSTOM_1, LPRN,  RPRN)    \
-    HLOIREA_TD_FORMAT(CUSTOM_2, LBRC,  RBRC)    \
-    HLOIREA_TD_FORMAT(CUSTOM_3, 2,     COMM)    \
-    HLOIREA_TD_FORMAT(CUSTOM_4, 3,     DOT)     \
-    HLOIREA_TD_FORMAT(CUSTOM_5, PLUS,  SCLN)
+    HLOIREA_TD_FORMAT(CUSTOM_0, SCLN, DQUO)     \
+    HLOIREA_TD_FORMAT(CUSTOM_1, COMM, UNDS)
 
 enum hloirea_layers {
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING) L_##LAYER,
@@ -22,8 +17,8 @@ enum hloirea_layers {
 #undef HLOIREA_LAYER_FORMAT
 };
 
-#define U_P1 LSFT(KC_F1) // leader key for tmux
-#define U_P2 LSFT(KC_F2) // leader key for emacs
+#define U_P1 LSFT(KC_F1)
+#define U_P2 LSFT(KC_F2)
 
 enum custom_keycodes {
     U_MACRO_00 = SAFE_RANGE,
