@@ -38,7 +38,7 @@
 #ifdef COMBO_COUNT
 #undef COMBO_COUNT
 #endif
-#define COMBO_COUNT 7
+#define COMBO_COUNT 9
 #ifdef COMBO_TERM
 #undef COMBO_TERM
 #endif

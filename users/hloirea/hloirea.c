@@ -96,6 +96,8 @@ const uint16_t PROGMEM combos_right_br_0[] = {KC_I, KC_K, COMBO_END};
 const uint16_t PROGMEM combos_right_br_1[] = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM combos_right_br_2[] = {KC_O, KC_L, COMBO_END};
 const uint16_t PROGMEM combos_alpha_b[]    = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM combos_bspc[]       = {KC_M, TD(TD_T_CUSTOM_1), COMBO_END};
+const uint16_t PROGMEM combos_del[]        = {TD(TD_T_CUSTOM_1), KC_DOT, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_left_br_0,  KC_LCBR),
@@ -104,12 +106,14 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_right_br_0, KC_RCBR),
     COMBO(combos_right_br_1, KC_RPRN),
     COMBO(combos_right_br_2, KC_RBRC),
-    COMBO(combos_alpha_b,    KC_B)
+    COMBO(combos_alpha_b,    KC_B),
+    COMBO(combos_bspc,       KC_BSPC),
+    COMBO(combos_del,        KC_DEL)
 };
 
 const key_override_t ko_list[] = {
+	ko_make_basic(MOD_MASK_SHIFT, TD(TD_T_CUSTOM_0), KC_COLN), // prevent input delay
 	ko_make_basic(MOD_MASK_SHIFT, TD(TD_T_CUSTOM_1), KC_MINS),
-	ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_MINS),
 	ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_EXLM)
 };
 
@@ -119,6 +123,59 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &ko_list[2],
     NULL
 };
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        case KC_A:
+        case KC_B:
+        case KC_C:
+        case KC_D:
+        case KC_E:
+        case KC_F:
+        case KC_G:
+        case KC_H:
+        case KC_I:
+        case KC_J:
+        case KC_K:
+        case KC_L:
+        case KC_M:
+        case KC_N:
+        case KC_O:
+        case KC_P:
+        case KC_Q:
+        case KC_R:
+        case KC_S:
+        case KC_T:
+        case KC_U:
+        case KC_V:
+        case KC_W:
+        case KC_X:
+        case KC_Y:
+        case KC_Z:
+        case KC_MINS:
+            add_weak_mods(MOD_BIT(KC_LSFT));
+            return true;
+
+        case TD(TD_T_CUSTOM_1):
+        case KC_0:
+        case KC_1:
+        case KC_2:
+        case KC_3:
+        case KC_4:
+        case KC_5:
+        case KC_6:
+        case KC_7:
+        case KC_8:
+        case KC_9:
+        case KC_BSPC:
+        case KC_DEL:
+        case KC_UNDS:
+            return true;
+
+        default:
+            return false;
+    }
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
