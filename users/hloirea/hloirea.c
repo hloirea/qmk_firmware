@@ -95,9 +95,7 @@ const uint16_t PROGMEM combos_left_br_2[]  = {KC_W, KC_S, COMBO_END};
 const uint16_t PROGMEM combos_right_br_0[] = {KC_I, KC_K, COMBO_END};
 const uint16_t PROGMEM combos_right_br_1[] = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM combos_right_br_2[] = {KC_O, KC_L, COMBO_END};
-const uint16_t PROGMEM combos_alpha_b[]    = {KC_N, KC_M, COMBO_END};
-const uint16_t PROGMEM combos_bspc[]       = {KC_M, TD(TD_T_CUSTOM_1), COMBO_END};
-const uint16_t PROGMEM combos_del[]        = {TD(TD_T_CUSTOM_1), KC_DOT, COMBO_END};
+const uint16_t PROGMEM combos_alpha_b[]    = {KC_M, TD(TD_T_COMM), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_left_br_0,  KC_LCBR),
@@ -106,70 +104,47 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_right_br_0, KC_RCBR),
     COMBO(combos_right_br_1, KC_RPRN),
     COMBO(combos_right_br_2, KC_RBRC),
-    COMBO(combos_alpha_b,    KC_B),
-    COMBO(combos_bspc,       KC_BSPC),
-    COMBO(combos_del,        KC_DEL)
+    COMBO(combos_alpha_b,    KC_B)
 };
 
-const key_override_t ko_list[] = {
-	ko_make_basic(MOD_MASK_SHIFT, TD(TD_T_CUSTOM_0), KC_COLN), // prevent input delay
-	ko_make_basic(MOD_MASK_SHIFT, TD(TD_T_CUSTOM_1), KC_MINS),
-	ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_EXLM)
-};
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case U_P_TAB:
+        case U_P_P1:
+        case U_P_P2:
+        case U_P_ESC:
+        case U_P_ENT:
+        case U_P_SPC:
+        case U_P_BSPC:
+            return TAPPING_TERM + 32;
 
-const key_override_t **key_overrides = (const key_override_t *[]){
-    &ko_list[0],
-    &ko_list[1],
-    &ko_list[2],
-    NULL
-};
+        case U_C_Z:
+        case U_C_SLSH:
+            return TAPPING_TERM + 64;
+
+        case U_C_SCLN:
+            return TAPPING_TERM + 128;
+        
+        default:
+            return TAPPING_TERM;
+    }
+}
 
 bool caps_word_press_user(uint16_t keycode) {
     switch (keycode) {
-        case KC_A:
-        case KC_B:
-        case KC_C:
-        case KC_D:
-        case KC_E:
-        case KC_F:
-        case KC_G:
-        case KC_H:
-        case KC_I:
-        case KC_J:
-        case KC_K:
-        case KC_L:
-        case KC_M:
-        case KC_N:
-        case KC_O:
-        case KC_P:
-        case KC_Q:
-        case KC_R:
-        case KC_S:
-        case KC_T:
-        case KC_U:
-        case KC_V:
-        case KC_W:
-        case KC_X:
-        case KC_Y:
-        case KC_Z:
+        case KC_A ... KC_Z:
         case KC_MINS:
             add_weak_mods(MOD_BIT(KC_LSFT));
             return true;
 
-        case TD(TD_T_CUSTOM_1):
-        case KC_0:
-        case KC_1:
-        case KC_2:
-        case KC_3:
-        case KC_4:
-        case KC_5:
-        case KC_6:
-        case KC_7:
-        case KC_8:
-        case KC_9:
+        case KC_1 ... KC_0:
         case KC_BSPC:
         case KC_DEL:
         case KC_UNDS:
+        case TD(TD_T_COMM):
+        case TD(TD_T_DOT):
+        case TD(TD_T_2):
+        case TD(TD_T_3):
             return true;
 
         default:
@@ -179,139 +154,18 @@ bool caps_word_press_user(uint16_t keycode) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LALT_T(U_P1):
+        case LSFT_T(U_P1):
         if (record->tap.count && record->event.pressed) {
             tap_code16(U_P1);
             return false;
         }
         break;
-        case LALT_T(U_P2):
+        case LSFT_T(U_P2):
         if (record->tap.count && record->event.pressed) {
             tap_code16(U_P2);
             return false;
         }
         break;
-#if 0
-        case U_MACRO_00:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(C(KC_W));
-            return false;
-        }
-        break;
-        case U_MACRO_01:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(C(KC_S));
-            return false;
-        }
-        break;
-        case U_MACRO_02:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(C(KC_F));
-            return false;
-        }
-        break;
-        case U_MACRO_03:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_0);
-            return false;
-        }
-        break;
-        case U_MACRO_04:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_1);
-            return false;
-        }
-        break;
-        case U_MACRO_05:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_3);
-            return false;
-        }
-        break;
-        case U_MACRO_06:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_2);
-            return false;
-        }
-        break;
-        case U_MACRO_07:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_R);
-            wait_ms(10);
-            tap_code16(KC_SPC);
-            return false;
-        }
-        break;
-        case U_MACRO_08:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_R);
-            wait_ms(10);
-            tap_code16(KC_J);
-            return false;
-        }
-        break;
-
-        case U_MACRO_09:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_SPC);
-            return false;
-        }
-        break;
-        case U_MACRO_10:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_B);
-            return false;
-        }
-        break;
-        case U_MACRO_11:
-        if (record->event.pressed) {
-            tap_code16(C(KC_X));
-            wait_ms(10);
-            tap_code16(KC_K);
-            return false;
-        }
-        break;
-        case U_MACRO_12:
-        if (record->event.pressed) {
-            tap_code16(A(KC_PERC));
-            return false;
-        }
-        break;
-        case U_MACRO_13:
-        if (record->event.pressed) {
-            tap_code16(A(KC_LABK));
-            return false;
-        }
-        break;
-        case U_MACRO_14:
-        if (record->event.pressed) {
-            tap_code16(A(KC_RABK));
-            return false;
-        }
-        break;
-#endif
     }
     return true;
 }
