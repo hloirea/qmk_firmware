@@ -9,9 +9,6 @@
 #define TAPPING_TERM_PER_KEY
 
 /* Mode-Tap Setting */
-#ifndef IGNORE_MOD_TAP_INTERRUPT
-#define IGNORE_MOD_TAP_INTERRUPT
-#endif
 #ifdef RETRO_TAPPING
 #undef RETRO_TAPPING
 #endif

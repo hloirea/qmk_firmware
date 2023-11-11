@@ -8,7 +8,6 @@
     HLOIREA_LAYER_FORMAT(LOWER,   "Lower")       \
     HLOIREA_LAYER_FORMAT(UPPER,   "Upper")       \
 
-    
 #define HLOIREA_TD_TAP_HOLD                     \
     HLOIREA_TD_FORMAT(COMM, COMM, DQUO)         \
     HLOIREA_TD_FORMAT(DOT,  DOT,  UNDS)         \
