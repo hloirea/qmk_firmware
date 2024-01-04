@@ -4,7 +4,6 @@
 
 #define HLOIREA_LAYER_LIST                       \
     HLOIREA_LAYER_FORMAT(BASE,    "Base")        \
-    HLOIREA_LAYER_FORMAT(SIMPLE,  "Simple")      \
     HLOIREA_LAYER_FORMAT(LOWER,   "Lower")       \
     HLOIREA_LAYER_FORMAT(UPPER,   "Upper")       \
 
