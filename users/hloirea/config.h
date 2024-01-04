@@ -1,12 +1,12 @@
 #pragma once
 
-#define DEBOUNCE 10
+#define DEBOUNCE 12
 
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM 200
-#define TAPPING_TERM_PER_KEY
+#define TAPPING_TERM 180
+/* #define TAPPING_TERM_PER_KEY */
 
 /* Mode-Tap Setting */
 #ifdef RETRO_TAPPING
@@ -30,7 +30,10 @@
 #ifdef COMBO_TERM
 #undef COMBO_TERM
 #endif
-#define COMBO_TERM  96
+#define COMBO_TERM  100
 #define EXTRA_SHORT_COMBOS
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+#define GRAVE_ESC_ALT_OVERRIDE
+#define GRAVE_ESC_CTRL_OVERRIDE

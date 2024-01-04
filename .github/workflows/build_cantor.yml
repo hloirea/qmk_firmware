@@ -1,0 +1,31 @@
+name: Build QMK firmware (cantor)
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
+
+    steps:
+
+    - name: Disable git safe directory checks
+      run : git config --global --add safe.directory '*'
+
+    - name: Checkout QMK
+      uses: actions/checkout@v3
+      with:
+        repository: hloirea/qmk_firmware
+        submodules: recursive
+
+    - name: Build firmware
+      run: qmk compile -kb cantor -km ${{ github.actor }}
+
+    - name: Archive firmware
+      uses: actions/upload-artifact@v3
+      continue-on-error: true
+      with:
+        name: cantor_${{ github.actor }}
+        path: |
+          *.hex
+          *.bin
+          *.uf2
