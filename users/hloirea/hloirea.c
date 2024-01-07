@@ -89,33 +89,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef HLOIREA_LAYER_FORMAT
 };
 
-#if 0
-const key_override_t key_override[] = {
-    ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_DQUO),
-    ko_make_basic(MOD_MASK_SHIFT, KC_DOT,  KC_UNDS),
-    ko_make_basic(MOD_MASK_SHIFT, KC_2,    KC_COMM),
-    ko_make_basic(MOD_MASK_SHIFT, KC_3,    KC_DOT),
-};
-const key_override_t **key_overrides = (const key_override_t *[]) {
-    &key_override[0],
-    &key_override[1],
-    &key_override[2],
-    &key_override[3],
-    NULL
-};
-#endif
-
 const uint16_t PROGMEM combos_left_br_0[]  = {KC_E, KC_D, COMBO_END};
 const uint16_t PROGMEM combos_left_br_1[]  = {KC_R, KC_F, COMBO_END};
 const uint16_t PROGMEM combos_left_br_2[]  = {KC_W, KC_S, COMBO_END};
 const uint16_t PROGMEM combos_right_br_0[] = {KC_I, KC_K, COMBO_END};
 const uint16_t PROGMEM combos_right_br_1[] = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM combos_right_br_2[] = {KC_O, KC_L, COMBO_END};
-#if 0
-const uint16_t PROGMEM combos_alpha_b[]    = {KC_M, TD(TD_T_COMM), COMBO_END};
-#else
 const uint16_t PROGMEM combos_alpha_b[]    = {KC_M, KC_COMM, COMBO_END};
-#endif
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_left_br_0,  KC_LCBR),
@@ -126,30 +106,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_right_br_2, KC_RBRC),
     COMBO(combos_alpha_b,    KC_B)
 };
-#if 0 // Disable TAPPING_TERM per key
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case U_P_TAB:
-        case U_P_P1:
-        case U_P_P2:
-        case U_P_ESC:
-        case U_P_ENT:
-        case U_P_SPC:
-        case U_P_BSPC:
-            return TAPPING_TERM + 32;
-
-        case U_C_Z:
-        case U_C_SLSH:
-            return TAPPING_TERM + 64;
-
-        case U_C_SCLN:
-            return TAPPING_TERM + 128;
-
-        default:
-            return TAPPING_TERM;
-    }
-}
-#endif
 
 bool caps_word_press_user(uint16_t keycode) {
     switch (keycode) {
@@ -162,12 +118,6 @@ bool caps_word_press_user(uint16_t keycode) {
         case KC_BSPC:
         case KC_DEL:
         case KC_UNDS:
-        #if 0
-        case TD(TD_T_COMM):
-        case TD(TD_T_DOT):
-        case TD(TD_T_2):
-        case TD(TD_T_3):
-        #endif
             return true;
 
         default:
@@ -177,13 +127,13 @@ bool caps_word_press_user(uint16_t keycode) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LSFT_T(U_P1):
+        case U_P_P1:
         if (record->tap.count && record->event.pressed) {
             tap_code16(U_P1);
             return false;
         }
         break;
-        case LSFT_T(U_P2):
+        case U_P_P2:
         if (record->tap.count && record->event.pressed) {
             tap_code16(U_P2);
             return false;
