@@ -1,6 +1,6 @@
 #pragma once
 
-#define DEBOUNCE 8
+#define DEBOUNCE 12
 
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
