@@ -5,7 +5,7 @@
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM 180
+#define TAPPING_TERM 160
 /* #define TAPPING_TERM_PER_KEY */
 
 /* Mode-Tap Setting */
@@ -21,6 +21,10 @@
 #undef QUICK_TAP_TERM
 #endif
 #define QUICK_TAP_TERM 0
+
+#ifdef HOLD_ON_OTHER_KEY_PRESS
+#undef HOLD_ON_OTHER_KEY_PRESS
+#endif
 
 /* Combo Setup */
 #ifdef COMBO_COUNT
