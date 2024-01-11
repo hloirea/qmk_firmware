@@ -3,7 +3,7 @@
 #define HLOIREA_LAYER_BASE \
 QK_GESC,      KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_DEL,    \
 U_P_UNDS,     KC_A,         KC_S,         KC_D,         KC_F,         KC_G,         KC_H,         KC_J,         KC_K,         KC_L,         KC_SCLN,      U_P_DQUO,  \
-KC_LALT,      KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         KC_N,         KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,      KC_RALT,   \
+KC_LALT,      KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         KC_N,         KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,      KC_LNG1,   \
                                           U_P_TAB,      U_P_SPC,      U_P_P1,       U_P_P2,       U_P_BSPC,     U_P_ENT
 
 #define HLOIREA_LAYER_UPPER \
