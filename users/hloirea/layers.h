@@ -7,8 +7,8 @@ KC_LALT,      KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     
                                           U_P_TAB,      U_P_SPC,      U_P_P1,       U_P_P2,       U_P_BSPC,     U_P_ENT
 
 #define HLOIREA_LAYER_UPPER \
-KC_ESC,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      XXXXXXX,      KC_AT,        KC_7,         KC_8,         KC_9,         KC_DLR,       KC_DEL,    \
-KC_LGUI,      KC_EXLM,      KC_LABK,      KC_PEQL,      KC_RABK,      KC_EQL,       KC_HASH,      KC_4,         KC_5,         KC_6,         KC_QUES,      KC_QUOT,   \
+KC_ESC,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      XXXXXXX,      KC_AT,        KC_7,         KC_8,         KC_9,         XXXXXXX,      KC_DEL,    \
+KC_LGUI,      KC_EXLM,      KC_LABK,      KC_PEQL,      KC_RABK,      KC_QUES,      KC_HASH,      KC_4,         KC_5,         KC_6,         KC_DLR,       KC_QUOT,   \
 KC_LALT,      KC_PSLS,      KC_PPLS,      KC_PMNS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      KC_RALT,   \
                                           KC_LCTL,      KC_SPC,       KC_LSFT,      XXXXXXX,      XXXXXXX,      XXXXXXX
 
