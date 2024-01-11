@@ -13,7 +13,7 @@ KC_LALT,      KC_PSLS,      KC_PPLS,      KC_PMNS,      KC_PAST,      KC_PERC,  
                                           KC_LCTL,      KC_SPC,       KC_LSFT,      XXXXXXX,      XXXXXXX,      XXXXXXX
 
 #define HLOIREA_LAYER_LOWER \
-KC_ESC,       KC_HOME,      KC_UP,        KC_END,       KC_PGUP,      KC_BTN1,      KC_PSCR,      KC_F7,        KC_F8,        KC_F9,        KC_F12,       KC_NUM,    \
-KC_LGUI,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_PGDN,      KC_BTN3,      NK_TOGG,      KC_F4,        KC_F5,        KC_F6,        KC_F11,       KC_CAPS,   \
-KC_LALT,      TD(TD_RESET), S(KC_DEL),    C(KC_INS),    S(KC_INS),    KC_BTN2,      KC_PAUS,      KC_F1,        KC_F2,        KC_F3,        KC_F10,       KC_SCRL,   \
+KC_APP,       KC_HOME,      KC_UP,        KC_END,       KC_PGUP,      KC_BTN1,      KC_PSCR,      KC_F7,        KC_F8,        KC_F9,        KC_F12,       KC_VOLU,   \
+KC_CAPS,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_PGDN,      KC_BTN3,      KC_SCRL,      KC_F4,        KC_F5,        KC_F6,        KC_F11,       KC_VOLD,   \
+KC_CALC,      TD(TD_RESET), S(KC_DEL),    C(KC_INS),    S(KC_INS),    KC_BTN2,      KC_PAUS,      KC_F1,        KC_F2,        KC_F3,        KC_F10,       KC_MUTE,   \
                                           XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_RSFT,      KC_BSPC,      KC_RCTL
