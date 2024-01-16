@@ -5,7 +5,7 @@
 
 #define ASSIGN_LAYER(layout, ...) layout(__VA_ARGS__)
 
-enum {
+enum tap_dance_action_idx_e {
 #define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD) TD_T_##DANCE,
     HLOIREA_TD_TAP_HOLD
 #undef HLOIREA_TD_FORMAT
@@ -16,17 +16,19 @@ enum {
     TD_RESET
 };
 
+/* tap dance for layer functions */
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING)                             \
 void td_fn_L_##LAYER(tap_dance_state_t *state, void *user_data) {       \
-    if (state->count == 2) {                                            \
+    if (state->count >= 2) {                                            \
         layer_move(L_##LAYER);                                          \
     }                                                                   \
 }
 HLOIREA_LAYER_LIST
 #undef HLOIREA_LAYER_FORMAT
 
-static td_tap_state_t tap_state[TD_T_CUSTOM_MAX];
+/* tap dance for advanced functions */
 #define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD)                             \
+static td_tap_state_t tap_state[TD_T_CUSTOM_MAX];                       \
 void td_fn_tap_##DANCE(tap_dance_state_t *state, void *user_data) {     \
     uint16_t tap = KC_##TAP;                                            \
     if (state->count == 3) {                                            \
@@ -66,7 +68,7 @@ void td_fn_reset_##DANCE(tap_dance_state_t *state, void *user_data) {   \
 HLOIREA_TD_TAP_HOLD
 #undef HLOIREA_TD_FORMAT
 
-
+/* tap dance for reset (QK_BOOT) */
 void td_fn_boot(tap_dance_state_t *state, void *user_data) {
     if (state->count >= 2) {
         reset_keyboard();
@@ -84,7 +86,11 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+#if 0 /* LAYOUT_hloirea(layouts/community/split_3x6_3/hloirea) is identical to LAYOUT_split_3x6_3 */
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_hloirea, HLOIREA_LAYER_##LAYER),
+#else
+#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_split_3x6_3, HLOIREA_LAYER_##LAYER),
+#endif
     HLOIREA_LAYER_LIST
 #undef HLOIREA_LAYER_FORMAT
 };
@@ -151,6 +157,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case U_P_DQUO:
         if (record->tap.count && record->event.pressed) {
             tap_code16(KC_DQUO);
+            return false;
+        }
+        break;
+
+        case U_P_LNG1:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(KC_LNG1);
             return false;
         }
         break;
