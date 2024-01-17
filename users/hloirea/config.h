@@ -1,5 +1,7 @@
 #pragma once
 
+#define MASTER_RIGHT
+
 #define DEBOUNCE 12
 
 #ifdef TAPPING_TERM
