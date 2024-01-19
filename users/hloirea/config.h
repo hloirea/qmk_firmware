@@ -39,5 +39,5 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-#define GRAVE_ESC_ALT_OVERRIDE
-#define GRAVE_ESC_CTRL_OVERRIDE
+/* Right MCU is Master*/
+#define MASTER_RIGHT
