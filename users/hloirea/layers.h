@@ -14,6 +14,6 @@ KC_CALC,      TD(TD_RESET), S(KC_DEL),    C(KC_INS),    S(KC_INS),    KC_BTN2,  
 
 #define HLOIREA_LAYER_UPPER \
 KC_ESC,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      XXXXXXX,      XXXXXXX,      KC_7,         KC_8,         KC_9,         KC_AT,        KC_GRV,    \
-CW_TOGG,      KC_EXLM,      KC_LABK,      KC_PEQL,      KC_RABK,      KC_QUES,      KC_HASH,      KC_4,         KC_5,         KC_6,         KC_DLR,       KC_QUOT,   \
+KC_LSFT,      KC_EXLM,      KC_LABK,      KC_PEQL,      KC_RABK,      KC_QUES,      KC_HASH,      KC_4,         KC_5,         KC_6,         KC_DLR,       KC_QUOT,   \
 KC_LALT,      KC_PSLS,      KC_PPLS,      KC_PMNS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      KC_LNG2,   \
                                           KC_LALT,      KC_SPC,       KC_LGUI,      XXXXXXX,      XXXXXXX,      XXXXXXX
