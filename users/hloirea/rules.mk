@@ -5,9 +5,6 @@ AUTO_SHIFT_ENABLE = no
 TAP_DANCE_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 KEY_OVERRIDE_ENABLE = no
-<<<<<<< HEAD
-=======
 BOOTMAGIC_ENABLE = yes
 NKRO_ENABLE = yes
->>>>>>> master
 INTROSPECTION_KEYMAP_C = hloirea.c
