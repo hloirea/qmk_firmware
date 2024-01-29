@@ -29,7 +29,7 @@ jobs:
       uses: actions/upload-artifact@v3
       continue-on-error: true
       with:
-        name: cantor_${{ github.actor }}
+        name: dz60_${{ github.actor }}
         path: |
           *.hex
           *.bin
