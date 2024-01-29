@@ -22,6 +22,10 @@
 #endif
 #define QUICK_TAP_TERM 0
 
+#ifdef HOLD_ON_OTHER_KEY_PRESS
+#undef HOLD_ON_OTHER_KEY_PRESS
+#endif
+
 /* Combo Setup */
 #ifdef COMBO_COUNT
 #undef COMBO_COUNT
@@ -34,3 +38,6 @@
 #define EXTRA_SHORT_COMBOS
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+/* Right MCU is Master*/
+#define MASTER_RIGHT
