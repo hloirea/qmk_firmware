@@ -1,4 +1,4 @@
-name: Build QMK firmware (cantor)
+name: Build QMK firmware (dz60)
 on: [push, workflow_dispatch]
 
 jobs:
@@ -14,7 +14,8 @@ jobs:
     - name: Checkout QMK
       uses: actions/checkout@v3
       with:
-        repository: hloirea/qmk_firmware/tree/layout_60
+        repository: hloirea/qmk_firmware
+        path: layout_60
         submodules: recursive
 
     - name: Build firmware
