@@ -86,11 +86,7 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-#if 0 /* LAYOUT_hloirea(layouts/community/split_3x6_3/hloirea) is identical to LAYOUT_split_3x6_3 */
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_hloirea, HLOIREA_LAYER_##LAYER),
-#else
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_split_3x6_3, HLOIREA_LAYER_##LAYER),
-#endif
+#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_60_ansi_split_bs_rshift, HLOIREA_LAYER_##LAYER),
     HLOIREA_LAYER_LIST
 #undef HLOIREA_LAYER_FORMAT
 };
@@ -101,7 +97,6 @@ const uint16_t PROGMEM combos_left_br_2[]  = {KC_W, KC_S, COMBO_END};
 const uint16_t PROGMEM combos_right_br_0[] = {KC_I, KC_K, COMBO_END};
 const uint16_t PROGMEM combos_right_br_1[] = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM combos_right_br_2[] = {KC_O, KC_L, COMBO_END};
-const uint16_t PROGMEM combos_alpha_b[]    = {KC_M, KC_COMM, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_left_br_0,  KC_LCBR),
@@ -110,7 +105,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_right_br_0, KC_RCBR),
     COMBO(combos_right_br_1, KC_RPRN),
     COMBO(combos_right_br_2, KC_RBRC),
-    COMBO(combos_alpha_b,    KC_B)
 };
 
 bool caps_word_press_user(uint16_t keycode) {
@@ -132,41 +126,5 @@ bool caps_word_press_user(uint16_t keycode) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case U_P_P1:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(U_P1);
-            return false;
-        }
-        break;
-
-        case U_P_P2:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(U_P2);
-            return false;
-        }
-        break;
-
-        case U_P_UNDS:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_UNDS);
-            return false;
-        }
-        break;
-
-        case U_P_DQUO:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_DQUO);
-            return false;
-        }
-        break;
-
-        case U_P_LNG1:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_LNG1);
-            return false;
-        }
-        break;
-    }
     return true;
 }

@@ -5,7 +5,7 @@
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM 180
+#define TAPPING_TERM 150
 /* #define TAPPING_TERM_PER_KEY */
 
 /* Mode-Tap Setting */
@@ -39,5 +39,5 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-/* Right MCU is Master*/
-#define MASTER_RIGHT
+#define GRAVE_ESC_ALT_OVERRIDE
+#define GRAVE_ESC_CTRL_OVERRIDE
