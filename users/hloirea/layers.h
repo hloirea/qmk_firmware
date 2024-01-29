@@ -9,7 +9,7 @@ KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                   
 
 #define HLOIREA_LAYER_FUNC \
 KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______,  \
-KC_APP,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, _______, KC_PSCR, _______, _______, _______, _______, _______, _______, _______,           \
+KC_APP,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, _______, KC_PSCR, _______, _______, _______, _______, _______, BL_TOGG, _______,           \
 KC_CAPS, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, _______, KC_SCRL, _______, _______, _______, _______, _______,          _______,           \
 KC_CALC,     TD(TD_RESET), U_P_CUT, U_P_COPY,U_P_PSTE,_______, KC_PAUS, _______, _______, _______, _______, _______, _______,           \
 _______, _______, _______,                            _______,                            _______, _______, _______, KC_RCTL
