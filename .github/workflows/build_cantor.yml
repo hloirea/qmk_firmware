@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: hloirea/qmk_firmware
+        ref: layout_42
         submodules: recursive
 
     - name: Build firmware
