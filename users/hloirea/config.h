@@ -41,3 +41,5 @@
 
 /* Right MCU is Master*/
 #define MASTER_RIGHT
+
+#define POINTING_DEVICE_ROTATION_90
