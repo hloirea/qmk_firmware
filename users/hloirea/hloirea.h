@@ -29,19 +29,17 @@ enum hloirea_layers_e {
 #define U_P1       S(KC_F1)
 #define U_P2       S(KC_F2)
 
-#define U_P_TAB    LALT_T(KC_TAB)
-#define U_P_SPC    LT(L_TO_FUNC, KC_SPC)
+#define U_P_TAB    LT(L_TO_FUNC, KC_SPC)
+#define U_P_SPC    LALT_T(KC_TAB)
 #define U_P_P1     LSFT_T(U_P1)
-#define U_P_P2     RGUI_T(U_P2)
-#define U_P_BSPC   LT(L_TO_NUM, KC_BSPC)
-#define U_P_ENT    RALT_T(KC_ENT)
+#define U_P_P2     RSFT_T(U_P2)
+#define U_P_BSPC   RGUI_T(KC_ENT)
+#define U_P_ENT    LT(L_TO_NUM, KC_BSPC)
 
 #define U_P_CUT    S(KC_DEL)
 #define U_P_COPY   C(KC_INS)
 #define U_P_PSTE   S(KC_INS)
 
-#define U_P_UNDS   LSFT_T(KC_UNDS)
-#define U_P_DQUO   RSFT_T(KC_DQUO)
 #define U_P_LNG1   RCTL_T(KC_LNG1)
 
 enum custom_keycodes {
