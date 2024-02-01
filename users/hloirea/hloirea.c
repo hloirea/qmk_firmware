@@ -95,22 +95,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef HLOIREA_LAYER_FORMAT
 };
 
-const uint16_t PROGMEM combos_left_br_0[]  = {KC_E, KC_D, COMBO_END};
-const uint16_t PROGMEM combos_left_br_1[]  = {KC_R, KC_F, COMBO_END};
-const uint16_t PROGMEM combos_left_br_2[]  = {KC_W, KC_S, COMBO_END};
-const uint16_t PROGMEM combos_right_br_0[] = {KC_I, KC_K, COMBO_END};
-const uint16_t PROGMEM combos_right_br_1[] = {KC_U, KC_J, COMBO_END};
-const uint16_t PROGMEM combos_right_br_2[] = {KC_O, KC_L, COMBO_END};
-const uint16_t PROGMEM combos_alpha_b[]    = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM combos_left_br_0[]   = {KC_E, KC_D, COMBO_END};
+const uint16_t PROGMEM combos_left_br_1[]   = {KC_R, KC_F, COMBO_END};
+const uint16_t PROGMEM combos_left_br_2[]   = {KC_W, KC_S, COMBO_END};
+const uint16_t PROGMEM combos_right_br_0[]  = {KC_I, KC_K, COMBO_END};
+const uint16_t PROGMEM combos_right_br_1[]  = {KC_U, KC_J, COMBO_END};
+const uint16_t PROGMEM combos_right_br_2[]  = {KC_O, KC_L, COMBO_END};
+const uint16_t PROGMEM combos_layer_mouse[] = {KC_T, KC_G, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combos_left_br_0,  KC_LCBR),
-    COMBO(combos_left_br_1,  KC_LPRN),
-    COMBO(combos_left_br_2,  KC_LBRC),
-    COMBO(combos_right_br_0, KC_RCBR),
-    COMBO(combos_right_br_1, KC_RPRN),
-    COMBO(combos_right_br_2, KC_RBRC),
-    COMBO(combos_alpha_b,    KC_B)
+    COMBO(combos_left_br_0,   KC_LCBR),
+    COMBO(combos_left_br_1,   KC_LPRN),
+    COMBO(combos_left_br_2,   KC_LBRC),
+    COMBO(combos_right_br_0,  KC_RCBR),
+    COMBO(combos_right_br_1,  KC_RPRN),
+    COMBO(combos_right_br_2,  KC_RBRC),
+    COMBO(combos_layer_mouse, TO(L_MOUSE))
 };
 
 bool caps_word_press_user(uint16_t keycode) {
