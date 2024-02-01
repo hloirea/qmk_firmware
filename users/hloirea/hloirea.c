@@ -147,20 +147,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-        case U_P_UNDS:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_UNDS);
-            return false;
-        }
-        break;
-
-        case U_P_DQUO:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_DQUO);
-            return false;
-        }
-        break;
-
         case U_P_LNG1:
         if (record->tap.count && record->event.pressed) {
             tap_code16(KC_LNG1);
