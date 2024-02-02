@@ -7,15 +7,15 @@ OSM(MOD_LCTL),KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     
                                           U_P_TAB,      U_P_SPC,      U_P_P1,       U_P_P2,       U_P_BSPC,     U_P_ENT
 
 #define HLOIREA_LAYER_FUN \
-KC_ESC,       TD(TD_RESET), XXXXXXX,      XXXXXXX,      TO(L_BASE),   XXXXXXX,      KC_PSCR,      KC_F7,        KC_F8,        KC_F9,        KC_F12,       KC_DEL,       \
+KC_ESC,       TD(TD_RESET), XXXXXXX,      XXXXXXX,      TO(L_BASE),   XXXXXXX,      KC_PSCR,      KC_F7,        KC_F8,        KC_F9,        KC_F12,       CW_TOGG,      \
 KC_UNDS,      XXXXXXX,      XXXXXXX,      TO(L_NAV),    TO(L_FUN),    XXXXXXX,      KC_SCRL,      KC_F4,        KC_F5,        KC_F6,        KC_F11,       KC_DQUO,      \
-OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_PAUS,      KC_F1,        KC_F2,        KC_F3,        KC_F10,       OSM(MOD_RCTL),\
+OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_PAUS,      KC_F1,        KC_F2,        KC_F3,        KC_F10,       KC_LNG2,      \
                                           KC_TAB,       KC_SPC,       OSM(MOD_LSFT),OSM(MOD_RSFT),KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_NUM \
 KC_GRV,       XXXXXXX,      XXXXXXX,      XXXXXXX,      TO(L_BASE),   XXXXXXX,      XXXXXXX,      KC_7,         KC_8,         KC_9,         KC_HASH,      KC_DEL,       \
 KC_UNDS,      XXXXXXX,      XXXXXXX,      TO(L_SYM),    TO(L_NUM),    XXXXXXX,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_DLR,       KC_DQUO,      \
-OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      KC_LNG2,      \
+OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      OSM(MOD_RCTL),\
                                           KC_TAB,       KC_SPC,       OSM(MOD_LSFT),OSM(MOD_RSFT),KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_NAV \
