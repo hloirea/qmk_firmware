@@ -95,6 +95,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef HLOIREA_LAYER_FORMAT
 };
 
+void pointing_device_init_user(void) {
+    set_auto_mouse_layer(L_MOUSE);
+    set_auto_mouse_enable(true);
+}
+
 const uint16_t PROGMEM combos_left_br_0[]   = {KC_E, KC_D, COMBO_END};
 const uint16_t PROGMEM combos_left_br_1[]   = {KC_R, KC_F, COMBO_END};
 const uint16_t PROGMEM combos_left_br_2[]   = {KC_W, KC_S, COMBO_END};
@@ -155,4 +160,38 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     }
     return true;
+}
+
+static const char PROGMEM qmk_logo[][7] = {
+    {0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x00},
+    {0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6, 0x00},
+    {0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0x00}
+};
+
+bool oled_task_user(void) {
+    int row = 0;
+    oled_set_cursor(0, row);
+    oled_write_P(qmk_logo[row], false);
+    oled_write_P(PSTR(" LAYER: "), false);
+
+    switch (get_highest_layer(layer_state)) {
+#define HLOIREA_LAYER_FORMAT(LAYER, STRING) case L_##LAYER: oled_write_P(PSTR(STRING), false); break;
+        HLOIREA_LAYER_LIST
+#undef HLOIREA_LAYER_FORMAT
+
+        default:
+            oled_write_P(PSTR("UNDEF "), false);
+    }
+    row++;
+    oled_set_cursor(0, row);
+    oled_write_P(qmk_logo[row], false);
+
+    row++;
+    oled_set_cursor(0, row);
+    oled_write_P(qmk_logo[row], false);
+    oled_write_P(PSTR(" SHIFT: "), false);
+
+    oled_write_P(host_keyboard_led_state().caps_lock ? PSTR("LOCK") : PSTR("OFF "), false);
+
+    return false;
 }
