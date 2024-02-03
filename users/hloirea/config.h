@@ -39,7 +39,7 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-/* Right MCU is Master*/
+/* Right MCU is Master */
 #define MASTER_RIGHT
 #define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_LED_STATE_ENABLE
@@ -47,3 +47,6 @@
 /* Trackball */
 #define POINTING_DEVICE_ROTATION_90
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+
+/* One-Shot Key */
+#define ONESHOT_TIMEOUT 3000
