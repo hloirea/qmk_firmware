@@ -39,5 +39,8 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-/* Right MCU is Master*/
+/* Right MCU is Master */
 #define MASTER_RIGHT
+
+/* One-Shot Key */
+#define ONESHOT_TIMEOUT 3000
