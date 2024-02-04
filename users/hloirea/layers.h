@@ -26,7 +26,7 @@ OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,  
 
 #define HLOIREA_LAYER_SYM \
 KC_GRV,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      KC_AT,        XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_DEL,       \
-KC_UNDS,      KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      XXXXXXX,      TO(L_SYM),    TO(L_NUM),    XXXXXXX,      XXXXXXX,      KC_DQUO,      \
+KC_UNDS,      KC_EXLM,      KC_LABK,      KC_PEQL,      KC_RABK,      KC_QUES,      XXXXXXX,      TO(L_SYM),    TO(L_NUM),    XXXXXXX,      XXXXXXX,      KC_DQUO,      \
 OSM(MOD_LCTL),KC_PSLS,      KC_PPLS,      KC_PMNS,      KC_PAST,      KC_PERC,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      OSM(MOD_RCTL),\
                                           KC_TAB,       KC_SPC,       TO(L_EXT),    TO(L_BASE),   KC_BSPC,      KC_ENT
 
