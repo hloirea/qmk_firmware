@@ -32,7 +32,8 @@ float average_arrow_y = 0;
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 
-    if (!layer_state_is(L_MOUSE)) {
+    if (!(layer_state_is(L_FUN) ||
+          layer_state_is(L_MOUSE))) {
         // update the accumulated arrow momentum
         average_arrow_x = average_arrow_x*ARROW_MOMENTUM + (float) mouse_report.x*(1-ARROW_MOMENTUM);
         average_arrow_y = average_arrow_y*ARROW_MOMENTUM + (float) mouse_report.y*(1-ARROW_MOMENTUM);
@@ -113,7 +114,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case L_BASE:
-        pimoroni_trackball_set_rgbw(0,0,0,255);
+        pimoroni_trackball_set_rgbw(0,0,0,0);
         break;
     case L_FUN:
         pimoroni_trackball_set_rgbw(192,192,0,0);
@@ -125,15 +126,16 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         pimoroni_trackball_set_rgbw(192,64,192,0);
         break;
     case L_SYM:
-        pimoroni_trackball_set_rgbw(192,64,0,0);
+        pimoroni_trackball_set_rgbw(64,64,192,0);
         break;
     case L_MOUSE:
-        pimoroni_trackball_set_rgbw(64,64,192,0);
+        pimoroni_trackball_set_rgbw(0,0,0,255);
         break;
     }
   return state;
 }
 
+/*
 void keyboard_post_init_user(void) {
 	pimoroni_trackball_set_rgbw(0,0,0,255);
 }
@@ -145,3 +147,4 @@ void suspend_power_down_user(void) {
 void suspend_wakeup_init_user(void) {
     pimoroni_trackball_set_rgbw(0,0,0,255);
 }
+*/
