@@ -95,22 +95,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef HLOIREA_LAYER_FORMAT
 };
 
-const uint16_t PROGMEM combos_left_br_0[]   = {KC_E, KC_D, COMBO_END};
-const uint16_t PROGMEM combos_left_br_1[]   = {KC_R, KC_F, COMBO_END};
-const uint16_t PROGMEM combos_left_br_2[]   = {KC_W, KC_S, COMBO_END};
-const uint16_t PROGMEM combos_right_br_0[]  = {KC_I, KC_K, COMBO_END};
-const uint16_t PROGMEM combos_right_br_1[]  = {KC_U, KC_J, COMBO_END};
-const uint16_t PROGMEM combos_right_br_2[]  = {KC_O, KC_L, COMBO_END};
-const uint16_t PROGMEM combos_layer_mouse[] = {KC_T, KC_G, COMBO_END};
+const uint16_t PROGMEM combos_lbr[][3] = {
+    {KC_R, KC_F, COMBO_END},
+    {KC_E, KC_D, COMBO_END},
+    {KC_W, KC_S, COMBO_END}
+};
+const uint16_t PROGMEM combos_rbr[][3] = {
+    {KC_U, KC_J, COMBO_END},
+    {KC_I, KC_K, COMBO_END},
+    {KC_O, KC_L, COMBO_END}
+};
+const uint16_t PROGMEM combos_p1[] = {
+    KC_G, KC_B, COMBO_END
+};
+const uint16_t PROGMEM combos_p2[] = {
+    KC_H, KC_N, COMBO_END
+};
+const uint16_t PROGMEM combos_caps_word[] = {
+    KC_F, KC_J, COMBO_END
+};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combos_left_br_0,   KC_LCBR),
-    COMBO(combos_left_br_1,   KC_LPRN),
-    COMBO(combos_left_br_2,   KC_LBRC),
-    COMBO(combos_right_br_0,  KC_RCBR),
-    COMBO(combos_right_br_1,  KC_RPRN),
-    COMBO(combos_right_br_2,  KC_RBRC),
-    COMBO(combos_layer_mouse, TO(L_MOUSE))
+    COMBO(combos_lbr[0],    KC_LPRN),
+    COMBO(combos_lbr[1],    KC_LCBR),
+    COMBO(combos_lbr[2],    KC_LBRC),
+    COMBO(combos_rbr[0],    KC_RPRN),
+    COMBO(combos_rbr[1],    KC_RCBR),
+    COMBO(combos_rbr[2],    KC_RBRC),
+    COMBO(combos_caps_word, CW_TOGG),
+    COMBO(combos_p1,        U_P1),
+    COMBO(combos_p2,        U_P2)
 };
 
 bool caps_word_press_user(uint16_t keycode) {
@@ -129,30 +143,4 @@ bool caps_word_press_user(uint16_t keycode) {
         default:
             return false;
     }
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case U_P_P1:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(U_P1);
-            return false;
-        }
-        break;
-
-        case U_P_P2:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(U_P2);
-            return false;
-        }
-        break;
-
-        case U_P_LNG1:
-        if (record->tap.count && record->event.pressed) {
-            tap_code16(KC_LNG1);
-            return false;
-        }
-        break;
-    }
-    return true;
 }
