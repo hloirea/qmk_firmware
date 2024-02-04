@@ -14,3 +14,6 @@ OLED_DRIVER = ssd1306
 POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = pimoroni_trackball
 INTROSPECTION_KEYMAP_C = hloirea.c
+SRC += trackball.c
+SRC += tap_dance.c
+SRC += oled.c

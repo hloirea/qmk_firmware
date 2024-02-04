@@ -1,6 +1,6 @@
 #pragma once
 
-#include "layers.h"
+#include "users/hloirea/layers.h"
 
 #define HLOIREA_LAYER_LIST                  \
     HLOIREA_LAYER_FORMAT(BASE,  "BASE  ")   \
@@ -24,6 +24,17 @@ enum hloirea_layers_e {
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING) L_##LAYER,
     HLOIREA_LAYER_LIST
 #undef HLOIREA_LAYER_FORMAT
+};
+
+enum tap_dance_action_idx_e {
+#define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD) TD_T_##DANCE,
+    HLOIREA_TD_TAP_HOLD
+#undef HLOIREA_TD_FORMAT
+    TD_T_CUSTOM_MAX,
+#define HLOIREA_LAYER_FORMAT(LAYER, STRING) TD_L_##LAYER,
+    HLOIREA_LAYER_LIST
+#undef HLOIREA_LAYER_FORMAT
+    TD_RESET
 };
 
 #define U_P1       S(KC_F1)

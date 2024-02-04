@@ -1,89 +1,8 @@
 #include QMK_KEYBOARD_H
 
-#include "hloirea.h"
-#include "tap_dance.h"
+#include "users/hloirea/def.h"
 
 #define ASSIGN_LAYER(layout, ...) layout(__VA_ARGS__)
-
-enum tap_dance_action_idx_e {
-#define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD) TD_T_##DANCE,
-    HLOIREA_TD_TAP_HOLD
-#undef HLOIREA_TD_FORMAT
-    TD_T_CUSTOM_MAX,
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) TD_L_##LAYER,
-    HLOIREA_LAYER_LIST
-#undef HLOIREA_LAYER_FORMAT
-    TD_RESET
-};
-
-/* tap dance for layer functions */
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING)                             \
-void td_fn_L_##LAYER(tap_dance_state_t *state, void *user_data) {       \
-    if (state->count >= 2) {                                            \
-        layer_move(L_##LAYER);                                          \
-    }                                                                   \
-}
-HLOIREA_LAYER_LIST
-#undef HLOIREA_LAYER_FORMAT
-
-/* tap dance for advanced functions */
-#define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD)                             \
-static td_tap_state_t tap_state[TD_T_CUSTOM_MAX];                       \
-void td_fn_tap_##DANCE(tap_dance_state_t *state, void *user_data) {     \
-    uint16_t tap = KC_##TAP;                                            \
-    if (state->count == 3) {                                            \
-        tap_code16(tap);                                                \
-        tap_code16(tap);                                                \
-        tap_code16(tap);                                                \
-    }                                                                   \
-    if (state->count > 3) {                                             \
-        tap_code16(tap);                                                \
-    }                                                                   \
-}                                                                       \
-void td_fn_finish_##DANCE(tap_dance_state_t *state, void *user_data) {  \
-    int idx = TD_T_##DANCE;                                             \
-    uint16_t tap = KC_##TAP;                                            \
-    uint16_t hold = KC_##HOLD;                                          \
-    tap_state[idx].step = td_step(state);                               \
-    switch (tap_state[idx].step) {                                      \
-    case SINGLE_TAP: register_code16(tap); break;                       \
-    case SINGLE_HOLD: register_code16(hold); break;                     \
-    case DOUBLE_TAP: register_code16(tap); register_code16(tap); break; \
-    case DOUBLE_SINGLE_TAP: tap_code16(tap); register_code16(tap);      \
-    }                                                                   \
-}                                                                       \
-void td_fn_reset_##DANCE(tap_dance_state_t *state, void *user_data) {   \
-    int idx = TD_T_##DANCE;                                             \
-    uint16_t tap = KC_##TAP;                                            \
-    uint16_t hold = KC_##HOLD;                                          \
-    wait_ms(10);                                                        \
-    switch (tap_state[idx].step) {                                      \
-    case SINGLE_TAP: unregister_code16(tap); break;                     \
-    case SINGLE_HOLD: unregister_code16(hold); break;                   \
-    case DOUBLE_TAP: unregister_code16(tap); break;                     \
-    case DOUBLE_SINGLE_TAP: unregister_code16(tap); break;              \
-    }                                                                   \
-    tap_state[idx].step = 0;                                            \
-}
-HLOIREA_TD_TAP_HOLD
-#undef HLOIREA_TD_FORMAT
-
-/* tap dance for reset (QK_BOOT) */
-void td_fn_boot(tap_dance_state_t *state, void *user_data) {
-    if (state->count >= 2) {
-        reset_keyboard();
-    }
-}
-
-tap_dance_action_t tap_dance_actions[] = {
-#define HLOIREA_TD_FORMAT(DANCE, TAP, HOLD) [TD_T_##DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(td_fn_tap_##DANCE, td_fn_finish_##DANCE, td_fn_reset_##DANCE),
-    HLOIREA_TD_TAP_HOLD
-#undef HLOIREA_TD_FORMAT
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [TD_L_##LAYER] = ACTION_TAP_DANCE_FN(td_fn_L_##LAYER),
-    HLOIREA_LAYER_LIST
-#undef HLOIREA_LAYER_FORMAT
-    [TD_RESET] = ACTION_TAP_DANCE_FN(td_fn_boot)
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #if 0 /* LAYOUT_hloirea(layouts/community/split_3x6_3/hloirea) is identical to LAYOUT_split_3x6_3 */
@@ -111,8 +30,8 @@ const uint16_t PROGMEM combos_p1[] = {
 const uint16_t PROGMEM combos_p2[] = {
     KC_H, KC_N, COMBO_END
 };
-const uint16_t PROGMEM combos_caps_word[] = {
-    KC_F, KC_J, COMBO_END
+const uint16_t PROGMEM combos_mouse[] = {
+    KC_Z, KC_X, COMBO_END
 };
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -122,7 +41,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_rbr[0],    KC_RPRN),
     COMBO(combos_rbr[1],    KC_RCBR),
     COMBO(combos_rbr[2],    KC_RBRC),
-    COMBO(combos_caps_word, CW_TOGG),
+    COMBO(combos_mouse,     TO(L_MOUSE)),
     COMBO(combos_p1,        U_P1),
     COMBO(combos_p2,        U_P2)
 };
@@ -155,48 +74,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     }
     return true;
-}
-
-static const char PROGMEM qmk_logo[][7] = {
-    {0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x00},
-    {0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6, 0x00},
-    {0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0x00}
-};
-
-bool oled_task_user(void) {
-    int row = 0;
-    oled_set_cursor(0, row);
-    oled_write_P(qmk_logo[row], false);
-    oled_write_P(PSTR(" LAYER: "), false);
-
-    switch (get_highest_layer(layer_state)) {
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) case L_##LAYER: oled_write_P(PSTR(STRING), false); break;
-        HLOIREA_LAYER_LIST
-#undef HLOIREA_LAYER_FORMAT
-
-        default:
-            oled_write_P(PSTR("UNDEF "), false);
-    }
-    row++;
-    oled_set_cursor(0, row);
-    oled_write_P(qmk_logo[row], false);
-
-    row++;
-    oled_set_cursor(0, row);
-    oled_write_P(qmk_logo[row], false);
-    oled_write_P(PSTR(" SHIFT: "), false);
-
-    bool is_caps_lock_p = host_keyboard_led_state().caps_lock;
-    bool is_caps_word_p = is_caps_word_on();
-    if (is_caps_lock_p && is_caps_word_p) {
-        oled_write_P(PSTR("BOTH"), false);
-    } else if (is_caps_lock_p) {
-        oled_write_P(PSTR("LOCK"), false);
-    } else if (is_caps_word_p) {
-        oled_write_P(PSTR("WORD"), false);
-    } else {
-        oled_write_P(PSTR("OFF "), false);
-    }
-
-    return false;
 }
