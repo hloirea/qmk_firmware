@@ -106,7 +106,6 @@ const uint16_t PROGMEM combos_left_br_2[]   = {KC_W, KC_S, COMBO_END};
 const uint16_t PROGMEM combos_right_br_0[]  = {KC_I, KC_K, COMBO_END};
 const uint16_t PROGMEM combos_right_br_1[]  = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM combos_right_br_2[]  = {KC_O, KC_L, COMBO_END};
-const uint16_t PROGMEM combos_layer_mouse[] = {KC_T, KC_G, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_left_br_0,   KC_LCBR),
@@ -115,7 +114,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_right_br_0,  KC_RCBR),
     COMBO(combos_right_br_1,  KC_RPRN),
     COMBO(combos_right_br_2,  KC_RBRC),
-    COMBO(combos_layer_mouse, TO(L_MOUSE))
 };
 
 bool caps_word_press_user(uint16_t keycode) {
@@ -191,7 +189,17 @@ bool oled_task_user(void) {
     oled_write_P(qmk_logo[row], false);
     oled_write_P(PSTR(" SHIFT: "), false);
 
-    oled_write_P(host_keyboard_led_state().caps_lock ? PSTR("LOCK") : PSTR("OFF "), false);
+    bool is_caps_lock_p = host_keyboard_led_state().caps_lock;
+    bool is_caps_word_p = is_caps_word_on();
+    if (is_caps_lock_p && is_caps_word_p) {
+        oled_write_P(PSTR("BOTH"), false);
+    } else if (is_caps_lock_p) {
+        oled_write_P(PSTR("LOCK"), false);
+    } else if (is_caps_word_p) {
+        oled_write_P(PSTR("WORD"), false);
+    } else {
+        oled_write_P(PSTR("OFF "), false);
+    }
 
     return false;
 }
