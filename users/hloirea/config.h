@@ -39,7 +39,7 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-/* Left MCU is Master */
+/* Right MCU is Master */
 #define MASTER_RIGHT
 #define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_LED_STATE_ENABLE

@@ -2,6 +2,7 @@
 #include <math.h>
 #include "users/hloirea/def.h"
 
+
 // Modify these alues to adjust the scrolling speed
 #define SCROLL_DIVISOR_H 8.0
 #define SCROLL_DIVISOR_V 8.0
