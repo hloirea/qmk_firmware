@@ -144,3 +144,15 @@ bool caps_word_press_user(uint16_t keycode) {
             return false;
     }
 }
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case U_P_LNG1:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(KC_LNG1);
+            return false;
+        }
+        break;
+    }
+    return true;
+}
