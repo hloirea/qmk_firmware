@@ -30,9 +30,6 @@ const uint16_t PROGMEM combos_p1[] = {
 const uint16_t PROGMEM combos_p2[] = {
     KC_H, KC_N, COMBO_END
 };
-const uint16_t PROGMEM combos_mouse[] = {
-    KC_Z, KC_X, COMBO_END
-};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lbr[0],    KC_LPRN),
@@ -41,7 +38,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_rbr[0],    KC_RPRN),
     COMBO(combos_rbr[1],    KC_RCBR),
     COMBO(combos_rbr[2],    KC_RBRC),
-    COMBO(combos_mouse,     TO(L_MOUSE)),
     COMBO(combos_p1,        U_P1),
     COMBO(combos_p2,        U_P2)
 };
