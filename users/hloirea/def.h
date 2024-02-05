@@ -3,13 +3,12 @@
 #include "users/hloirea/layers.h"
 
 #define HLOIREA_LAYER_LIST                  \
-    HLOIREA_LAYER_FORMAT(BASE,  "Base  ")   \
-    HLOIREA_LAYER_FORMAT(FUN,   "Func  ")   \
-    HLOIREA_LAYER_FORMAT(NUM,   "Number")   \
-    HLOIREA_LAYER_FORMAT(NAV,   "Nav   ")   \
-    HLOIREA_LAYER_FORMAT(SYM,   "Symbol")   \
-    HLOIREA_LAYER_FORMAT(EXT,   "Ext   ")   \
-    HLOIREA_LAYER_FORMAT(MOUSE, "Mouse ")   \
+    HLOIREA_LAYER_FORMAT(BASE,  "Base ")   \
+    HLOIREA_LAYER_FORMAT(FUN,   "Func ")   \
+    HLOIREA_LAYER_FORMAT(NAV,   "Nav  ")   \
+    HLOIREA_LAYER_FORMAT(SYML,  "Sym L")   \
+    HLOIREA_LAYER_FORMAT(SYMR,  "Sym R")   \
+    HLOIREA_LAYER_FORMAT(MOUSE, "Mouse")   \
 
 #if 0 /* advanced tap dances is not currently in use */
 #define HLOIREA_TD_TAP_HOLD                     \
