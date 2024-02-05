@@ -8,7 +8,7 @@ OSM(MOD_LCTL),KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,     
 
 #define HLOIREA_LAYER_FUN \
 KC_ESC,       TD(TD_RESET), TO(L_MOUSE),  XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_PSCR,      KC_F7,        KC_F8,        KC_F9,        KC_F12,       KC_CAPS,      \
-OSM(MOD_LSFT),XXXXXXX,      XXXXXXX,      TO(L_NAV),    TO(L_FUN),    XXXXXXX,      KC_SCRL,      KC_F4,        KC_F5,        KC_F6,        KC_F11,       KC_LNUM,      \
+OSM(MOD_LSFT),XXXXXXX,      XXXXXXX,      TO(L_NAV),    TO(L_FUN),    XXXXXXX,      KC_SCRL,      KC_F4,        KC_F5,        KC_F6,        KC_F11,       KC_NUM,       \
 OSM(MOD_LCTL),XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_PAUS,      KC_F1,        KC_F2,        KC_F3,        KC_F10,       KC_LNG2,      \
                                           KC_TAB,       KC_SPC,       TO(L_BASE),   TO(L_BASE),   KC_BSPC,      KC_ENT
 
