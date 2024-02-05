@@ -119,17 +119,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case L_FUN:
         pimoroni_trackball_set_rgbw(192,192,0,0);
         break;
-    case L_NUM:
-        pimoroni_trackball_set_rgbw(64,192,192,0);
-        break;
     case L_NAV:
         pimoroni_trackball_set_rgbw(192,64,192,0);
         break;
-    case L_SYM:
-        pimoroni_trackball_set_rgbw(224,64,64,0);
-        break;
-    case L_EXT:
-        pimoroni_trackball_set_rgbw(64,64,255,0);
+    case L_SYML:
+    case L_SYMR:
+        pimoroni_trackball_set_rgbw(64,192,192,0);
         break;
     case L_MOUSE:
         pimoroni_trackball_set_rgbw(0,0,0,255);
