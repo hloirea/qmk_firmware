@@ -96,7 +96,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         scroll_accumulated_v += (float)mouse_report.y / SCROLL_DIVISOR_V;
 
         // Assign integer parts of accumulated scroll values to the mouse report
-        mouse_report.h = -(int16_t)scroll_accumulated_h;
+        mouse_report.h = (int16_t)scroll_accumulated_h;
         mouse_report.v = (int16_t)scroll_accumulated_v;
 
         // Update accumulated scroll values by subtracting the integer parts
@@ -126,7 +126,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         pimoroni_trackball_set_rgbw(192,64,192,0);
         break;
     case L_SYM:
-        pimoroni_trackball_set_rgbw(64,64,192,0);
+        pimoroni_trackball_set_rgbw(224,64,64,0);
+        break;
+    case L_EXT:
+        pimoroni_trackball_set_rgbw(64,64,255,0);
         break;
     case L_MOUSE:
         pimoroni_trackball_set_rgbw(0,0,0,255);

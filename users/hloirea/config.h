@@ -1,6 +1,6 @@
 #pragma once
 
-#define DEBOUNCE 12
+#define DEBOUNCE 8
 
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
@@ -49,3 +49,4 @@
 // #define POINTING_DEVICE_RIGHT
 #define POINTING_DEVICE_ROTATION_90
 #define PIMORONI_TRACKBALL_SCALE 1
+#define MOUSE_EXTENDED_REPORT
