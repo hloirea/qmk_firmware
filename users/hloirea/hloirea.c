@@ -24,12 +24,6 @@ const uint16_t PROGMEM combos_rbr[][3] = {
     {KC_I, KC_K, COMBO_END},
     {KC_O, KC_L, COMBO_END}
 };
-const uint16_t PROGMEM combos_p1[] = {
-    KC_G, KC_B, COMBO_END
-};
-const uint16_t PROGMEM combos_p2[] = {
-    KC_H, KC_N, COMBO_END
-};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lbr[0],    KC_LPRN),
@@ -37,9 +31,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lbr[2],    KC_LBRC),
     COMBO(combos_rbr[0],    KC_RPRN),
     COMBO(combos_rbr[1],    KC_RCBR),
-    COMBO(combos_rbr[2],    KC_RBRC),
-    COMBO(combos_p1,        U_P1),
-    COMBO(combos_p2,        U_P2)
+    COMBO(combos_rbr[2],    KC_RBRC)
 };
 
 bool caps_word_press_user(uint16_t keycode) {
@@ -62,6 +54,33 @@ bool caps_word_press_user(uint16_t keycode) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case U_P_P1:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(U_P1);
+            return false;
+        }
+        break;
+
+        case U_P_P2:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(U_P2);
+            return false;
+        }
+        break;
+
+        case U_P_UNDS:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(KC_UNDS);
+            return false;
+        }
+        break;
+
+        case U_P_DQUO:
+        if (record->tap.count && record->event.pressed) {
+            tap_code16(KC_DQUO);
+            return false;
+        }
+        break;
         case U_P_LNG1:
         if (record->tap.count && record->event.pressed) {
             tap_code16(KC_LNG1);
