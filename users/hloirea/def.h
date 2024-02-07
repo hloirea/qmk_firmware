@@ -40,17 +40,14 @@ enum tap_dance_action_idx_e {
 #define U_P1       S(KC_F1)
 #define U_P2       S(KC_F2)
 
-#define U_P_P1     LT(L_SYML, U_P1)
-#define U_P_P2     LT(L_SYMR, U_P2)
+#define U_P_P1     RSFT_T(U_P1)
+#define U_P_P2     LSFT_T(U_P2)
 
 #define U_P_SPC    LALT_T(KC_SPC)
 #define U_P_BSPC   RALT_T(KC_BSPC)
 
 #define U_P_TAB    LGUI_T(KC_TAB)
 #define U_P_ENT    RGUI_T(KC_ENT)
-
-#define U_P_UNDS   RSFT_T(KC_UNDS)
-#define U_P_DQUO   LSFT_T(KC_DQUO)
 
 #define U_P_LNG1   RCTL_T(KC_LNG1)
 
