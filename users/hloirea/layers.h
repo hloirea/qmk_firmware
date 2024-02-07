@@ -20,14 +20,14 @@ OSM(MOD_LCTL),U_P_UNDO,     U_P_CUT,      U_P_COPY,     U_P_PSTE,     KC_MUTE,  
 
 #define HLOIREA_LAYER_SYML \
 KC_GRV,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      KC_AT,        KC_HASH,      KC_7,         KC_8,         KC_9,         KC_DLR,       KC_DEL,       \
-OSM(MOD_LSFT),KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_COLN,      OSM(MOD_RSFT),\
-OSM(MOD_LCTL),KC_SLSH,      KC_PLUS,      KC_MINS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      KC_DOT,       \
+OSM(MOD_LSFT),KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_DOT,       OSM(MOD_RSFT),\
+OSM(MOD_LCTL),KC_SLSH,      KC_PLUS,      KC_MINS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      OSM(MOD_RCTL),\
                                           KC_TAB,       KC_SPC,       TO(L_BASE),   TO(L_SYMR),   KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_SYMR \
 KC_GRV,       KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      KC_AT,        KC_HASH,      KC_7,         KC_8,         KC_9,         KC_DLR,       KC_DEL,       \
-OSM(MOD_LSFT),KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_COLN,      OSM(MOD_RSFT),\
-OSM(MOD_LCTL),KC_SLSH,      KC_PLUS,      KC_MINS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      KC_DOT,       \
+OSM(MOD_LSFT),KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_DOT,       OSM(MOD_RSFT),\
+OSM(MOD_LCTL),KC_SLSH,      KC_PLUS,      KC_MINS,      KC_PAST,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      OSM(MOD_RCTL),\
                                           KC_TAB,       KC_SPC,       TO(L_SYML),   TO(L_BASE),   KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_MOUSE \
