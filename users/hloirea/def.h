@@ -49,8 +49,8 @@ enum tap_dance_action_idx_e {
 #define U_P_TAB    LGUI_T(KC_TAB)
 #define U_P_ENT    RGUI_T(KC_ENT)
 
-#define U_P_Z      LCTL_T(U_P1)
-#define U_P_SLSH   RCTL_T(U_P2)
+#define U_P_Z      LCTL_T(KC_Z)
+#define U_P_SLSH   RCTL_T(KC_SLSH)
 
 #define U_P_UNDO   C(KC_Z)
 #define U_P_CUT    S(KC_DEL)
