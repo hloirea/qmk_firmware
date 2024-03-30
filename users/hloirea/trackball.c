@@ -122,8 +122,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case L_NAV:
         pimoroni_trackball_set_rgbw(192,64,192,0);
         break;
-    case L_SYML:
-    case L_SYMR:
+    case L_SYM:
         pimoroni_trackball_set_rgbw(64,192,192,0);
         break;
     case L_MOUSE:
