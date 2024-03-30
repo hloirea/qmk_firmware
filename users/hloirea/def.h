@@ -2,12 +2,11 @@
 
 #include "users/hloirea/layers.h"
 
-#define HLOIREA_LAYER_LIST                  \
+#define HLOIREA_LAYER_LIST                 \
     HLOIREA_LAYER_FORMAT(BASE,  "Base ")   \
     HLOIREA_LAYER_FORMAT(FUN,   "Func ")   \
     HLOIREA_LAYER_FORMAT(NAV,   "Nav  ")   \
-    HLOIREA_LAYER_FORMAT(SYML,  "Sym L")   \
-    HLOIREA_LAYER_FORMAT(SYMR,  "Sym R")   \
+    HLOIREA_LAYER_FORMAT(SYM,   "Sym  ")   \
     HLOIREA_LAYER_FORMAT(MOUSE, "Mouse")   \
 
 #if 0 /* advanced tap dances is not currently in use */
@@ -40,19 +39,21 @@ enum tap_dance_action_idx_e {
 #define U_P1       S(KC_F1)
 #define U_P2       S(KC_F2)
 
-#define U_P_P1     LSFT_T(U_P1)
-#define U_P_P2     RSFT_T(U_P2)
+#define U_P_P1     LT(L_FUN, U_P1)
+#define U_P_P2     LT(L_NAV, U_P2)
 
-#define U_P_SPC    LALT_T(KC_SPC)
-#define U_P_BSPC   RALT_T(KC_BSPC)
+#define U_P_SPC    LT(L_SYM, KC_SPC)
+#define U_P_BSPC   LT(L_SYM, KC_BSPC)
 
 #define U_P_TAB    LCTL_T(KC_TAB)
 #define U_P_ENT    RCTL_T(KC_ENT)
 
-#define U_P_Z      LGUI_T(KC_Z)
-#define U_P_SLSH   RGUI_T(KC_SLSH)
+#define U_P_Z      LSFT_T(KC_Z)
+#define U_P_BSLS   LSFT_T(KC_BSLS)
+#define U_P_SLSH   RSFT_T(KC_SLSH)
 
 #define U_P_UNDO   C(KC_Z)
+#define U_P_REDO   C(KC_Y)
 #define U_P_CUT    S(KC_DEL)
 #define U_P_COPY   C(KC_INS)
 #define U_P_PSTE   S(KC_INS)
