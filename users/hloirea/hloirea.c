@@ -14,24 +14,60 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #undef HLOIREA_LAYER_FORMAT
 };
 
-const uint16_t PROGMEM combos_lbr[][3] = {
-    {KC_R, KC_F, COMBO_END},
-    {KC_E, KC_D, COMBO_END},
-    {KC_W, KC_S, COMBO_END}
+const uint16_t PROGMEM combos_ul[][3] = {
+    {KC_T,   KC_G,    COMBO_END},
+    {KC_R,   KC_F,    COMBO_END},
+    {KC_E,   KC_D,    COMBO_END},
+    {KC_W,   KC_S,    COMBO_END},
+    {KC_Q,   KC_A,    COMBO_END}
 };
-const uint16_t PROGMEM combos_rbr[][3] = {
-    {KC_U, KC_J, COMBO_END},
-    {KC_I, KC_K, COMBO_END},
-    {KC_O, KC_L, COMBO_END}
+
+const uint16_t PROGMEM combos_ll[][3] = {
+    {KC_G,   KC_B,    COMBO_END},
+    {KC_F,   KC_V,    COMBO_END},
+    {KC_D,   KC_C,    COMBO_END},
+    {KC_S,   KC_X,    COMBO_END}
+};
+
+const uint16_t PROGMEM combos_ur[][3] = {
+    {KC_Y,   KC_H,    COMBO_END},
+    {KC_U,   KC_J,    COMBO_END},
+    {KC_I,   KC_K,    COMBO_END},
+    {KC_O,   KC_L,    COMBO_END},
+    {KC_P,   KC_SCLN, COMBO_END},
+    {KC_DLR, KC_DOT,  COMBO_END}
+};
+
+const uint16_t PROGMEM combos_lr[][3] = {
+    {KC_H,   KC_N,    COMBO_END},
+    {KC_J,   KC_M,    COMBO_END},
+    {KC_K,   KC_COMM, COMBO_END},
+    {KC_L,   KC_DOT,  COMBO_END}
 };
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combos_lbr[0],    KC_LPRN),
-    COMBO(combos_lbr[1],    KC_LCBR),
-    COMBO(combos_lbr[2],    KC_LBRC),
-    COMBO(combos_rbr[0],    KC_RPRN),
-    COMBO(combos_rbr[1],    KC_RCBR),
-    COMBO(combos_rbr[2],    KC_RBRC)
+    COMBO(combos_ul[0],    KC_ESC),
+    COMBO(combos_ul[1],    KC_LPRN),
+    COMBO(combos_ul[2],    KC_LCBR),
+    COMBO(combos_ul[3],    KC_LBRC),
+    COMBO(combos_ul[4],    KC_GRV),
+
+    COMBO(combos_ll[0],    KC_UNDS),
+    COMBO(combos_ll[1],    OSM(MOD_LGUI)),
+    COMBO(combos_ll[2],    OSM(MOD_LALT)),
+    COMBO(combos_ll[3],    OSM(MOD_LCTL)),
+
+    COMBO(combos_ur[0],    KC_DEL),
+    COMBO(combos_ur[1],    KC_RPRN),
+    COMBO(combos_ur[2],    KC_RCBR),
+    COMBO(combos_ur[3],    KC_RBRC),
+    COMBO(combos_ur[4],    KC_LNG1),
+    COMBO(combos_ur[5],    KC_LNG2),
+
+    COMBO(combos_lr[0],    KC_DQUO),
+    COMBO(combos_lr[1],    OSM(MOD_RGUI)),
+    COMBO(combos_lr[2],    OSM(MOD_RALT)),
+    COMBO(combos_lr[3],    OSM(MOD_RCTL))
 };
 
 bool caps_word_press_user(uint16_t keycode) {
