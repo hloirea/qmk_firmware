@@ -34,7 +34,7 @@
 #ifdef COMBO_TERM
 #undef COMBO_TERM
 #endif
-#define COMBO_TERM  100
+#define COMBO_TERM  150
 #define EXTRA_SHORT_COMBOS
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
