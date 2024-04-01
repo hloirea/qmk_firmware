@@ -15,13 +15,13 @@ XXXXXXX,      KC_CAPS,      U_P_CUT,      U_P_COPY,     U_P_PSTE,     XXXXXXX,  
 #define HLOIREA_LAYER_NAV \
 XXXXXXX,      KC_HOME,      KC_UP,        KC_END,       KC_PGUP,      KC_VOLU,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      \
 XXXXXXX,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_PGDN,      KC_VOLD,      XXXXXXX,      TO(L_NAV),    TO(L_FUN),    TO(L_SYM),    TO(L_MOUSE),  XXXXXXX,      \
-XXXXXXX,      KC_LSFT,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_MUTE,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_RSFT,      XXXXXXX,      \
+XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      KC_MUTE,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      \
                                           KC_TAB,       KC_SPC,       TO(L_BASE),   TO(L_BASE),   KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_SYM \
 XXXXXXX,      KC_TILD,      KC_CIRC,      KC_PIPE,      KC_AMPR,      KC_AT,        KC_HASH,      KC_7,         KC_8,         KC_9,         KC_DLR,       XXXXXXX,      \
 XXXXXXX,      KC_EXLM,      KC_LABK,      KC_EQL,       KC_RABK,      KC_QUES,      KC_QUOT,      KC_4,         KC_5,         KC_6,         KC_DOT,       XXXXXXX,      \
-XXXXXXX,      U_P_SLSH,     KC_PLUS,      KC_MINS,      KC_ASTR,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         U_P_BSLS,     XXXXXXX,      \
+XXXXXXX,      KC_SLSH,      KC_PLUS,      KC_MINS,      KC_ASTR,      KC_PERC,      KC_0,         KC_1,         KC_2,         KC_3,         KC_BSLS,      XXXXXXX,      \
                                           KC_TAB,       KC_SPC,       TO(L_BASE),   TO(L_BASE),   KC_BSPC,      KC_ENT
 
 #define HLOIREA_LAYER_MOUSE \

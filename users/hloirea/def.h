@@ -45,12 +45,11 @@ enum tap_dance_action_idx_e {
 #define U_P_SPC    LT(L_SYM, KC_SPC)
 #define U_P_BSPC   LT(L_SYM, KC_BSPC)
 
+#define U_P_Z      LT(L_MOUSE, KC_Z)
+#define U_P_SLSH   LT(L_MOUSE, KC_SLSH)
+
 #define U_P_TAB    LCTL_T(KC_TAB)
 #define U_P_ENT    RCTL_T(KC_ENT)
-
-#define U_P_Z      LSFT_T(KC_Z)
-#define U_P_BSLS   LSFT_T(KC_BSLS)
-#define U_P_SLSH   RSFT_T(KC_SLSH)
 
 #define U_P_UNDO   C(KC_Z)
 #define U_P_REDO   C(KC_Y)
