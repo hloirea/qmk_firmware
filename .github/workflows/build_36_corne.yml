@@ -1,4 +1,4 @@
-name: Build QMK firmware (corne)
+name: Build QMK firmware (36_corne)
 on:
   workflow_dispatch:
   push:
