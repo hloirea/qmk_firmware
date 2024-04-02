@@ -62,14 +62,14 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_rbr[1],    KC_RCBR),
     COMBO(combos_rbr[2],    KC_RBRC),
 
-    COMBO(combos_lmod[0],   OSM(MOD_LGUI)),
+    COMBO(combos_lmod[0],   OSM(MOD_LALT)),
     COMBO(combos_lmod[1],   OSM(MOD_LSFT)),
-    COMBO(combos_lmod[2],   OSM(MOD_LALT)),
+    COMBO(combos_lmod[2],   OSM(MOD_LGUI)),
     COMBO(combos_lmod[3],   OSM(MOD_LSFT)),
 
-    COMBO(combos_rmod[0],   OSM(MOD_RGUI)),
+    COMBO(combos_rmod[0],   OSM(MOD_RALT)),
     COMBO(combos_rmod[1],   OSM(MOD_RSFT)),
-    COMBO(combos_rmod[2],   OSM(MOD_RALT)),
+    COMBO(combos_rmod[2],   OSM(MOD_RGUI)),
     COMBO(combos_rmod[3],   OSM(MOD_RSFT)),
 
     COMBO(combos_lang[0],   KC_LNG1),
