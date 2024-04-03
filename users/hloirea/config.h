@@ -34,10 +34,15 @@
 #ifdef COMBO_TERM
 #undef COMBO_TERM
 #endif
-#define COMBO_TERM  100
+#define COMBO_TERM  150
 #define EXTRA_SHORT_COMBOS
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 /* Right MCU is Master */
 #define MASTER_RIGHT
+
+// #define USB_SUSPEND_WAKEUP_DELAY 200
+
+#define WAIT_FOR_USB
+// #define NO_USB_STARTUP_CHECK
