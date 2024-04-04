@@ -41,14 +41,14 @@ const uint16_t PROGMEM combos_rmod[][3] = {
 };
 
 const uint16_t PROGMEM combos_lang[][3] = {
-    {KC_Y,   KC_H,    COMBO_END},
-    {KC_HASH,KC_QUOT, COMBO_END},
+    {KC_H,   KC_N,    COMBO_END},
+    {KC_QUOT,KC_0,    COMBO_END},
 };
 
 const uint16_t PROGMEM combos_etc[][3] = {
     {KC_T,   KC_G,    COMBO_END},
     {KC_G,   KC_B,    COMBO_END},
-    {KC_H,   KC_N,    COMBO_END},
+    {KC_Y,   KC_H,    COMBO_END},
     {KC_Q,   KC_A,    COMBO_END},
     {KC_P,   KC_SCLN, COMBO_END}
 };
@@ -75,8 +75,8 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lang[0],   KC_LNG1),
     COMBO(combos_lang[1],   KC_LNG2),
 
-    COMBO(combos_etc[0],    KC_ESC),
-    COMBO(combos_etc[1],    KC_UNDS),
+    COMBO(combos_etc[0],    KC_UNDS),
+    COMBO(combos_etc[1],    KC_ESC),
     COMBO(combos_etc[2],    KC_DQUO),
     COMBO(combos_etc[3],    KC_GRV),
     COMBO(combos_etc[4],    KC_DEL)
