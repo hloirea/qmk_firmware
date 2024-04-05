@@ -42,7 +42,5 @@
 /* Right MCU is Master */
 #define MASTER_RIGHT
 
-// #define USB_SUSPEND_WAKEUP_DELAY 200
-
+/* for blackpill MCU */
 #define WAIT_FOR_USB
-// #define NO_USB_STARTUP_CHECK
