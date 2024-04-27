@@ -7,9 +7,9 @@ U_P_Z,            KC_X,             KC_C,             KC_V,             KC_B,   
                                     U_P_TAB,          U_P_SPC,          U_P_P1,           U_P_P2,           U_P_BSPC,         U_P_ENT
 
 #define HLOIREA_LAYER_FUN \
-TD(TD_RESET),     XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_PSCR,          KC_F7,            KC_F8,            KC_F9,            KC_F12,           \
+TD(TD_RESET),     XXXXXXX,          CW_TOGG,          KC_CAPS,          XXXXXXX,          KC_PSCR,          KC_F7,            KC_F8,            KC_F9,            KC_F12,           \
 TD(TD_L_MOUSE),   TD(TD_L_SYM),     TD(TD_L_NAV),     TD(TD_L_FUN),     XXXXXXX,          KC_SCRL,          KC_F4,            KC_F5,            KC_F6,            KC_F11,           \
-KC_CAPS,          U_P_CUT,          U_P_COPY,         U_P_PSTE,         XXXXXXX,          KC_PAUS,          KC_F1,            KC_F2,            KC_F3,            KC_F10,           \
+U_P_UNDO,         U_P_CUT,          U_P_COPY,         U_P_PSTE,         U_P_REDO,         KC_PAUS,          KC_F1,            KC_F2,            KC_F3,            KC_F10,           \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
 
 #define HLOIREA_LAYER_NAV \
