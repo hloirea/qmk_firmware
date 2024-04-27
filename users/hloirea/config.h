@@ -30,7 +30,7 @@
 #ifdef COMBO_COUNT
 #undef COMBO_COUNT
 #endif
-#define COMBO_COUNT 22
+#define COMBO_COUNT 24
 #ifdef COMBO_TERM
 #undef COMBO_TERM
 #endif
@@ -38,9 +38,3 @@
 #define EXTRA_SHORT_COMBOS
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
-
-/* Right MCU is Master */
-#define MASTER_RIGHT
-
-/* for blackpill MCU */
-#define WAIT_FOR_USB

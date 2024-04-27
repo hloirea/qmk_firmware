@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #if 0 /* LAYOUT_hloirea(layouts/community/split_3x6_3/hloirea) is identical to LAYOUT_split_3x6_3 */
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_hloirea, HLOIREA_LAYER_##LAYER),
 #else
-#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_split_3x6_3, HLOIREA_LAYER_##LAYER),
+#define HLOIREA_LAYER_FORMAT(LAYER, STRING) [L_##LAYER] = ASSIGN_LAYER(LAYOUT_split_3x5_3, HLOIREA_LAYER_##LAYER),
 #endif
     HLOIREA_LAYER_LIST
 #undef HLOIREA_LAYER_FORMAT
@@ -42,14 +42,18 @@ const uint16_t PROGMEM combos_rmod[][3] = {
 
 const uint16_t PROGMEM combos_lang[][3] = {
     {KC_H,   KC_N,    COMBO_END},
-    {KC_QUOT,KC_0,    COMBO_END},
+    {KC_QUOT,KC_0,    COMBO_END}
 };
 
-const uint16_t PROGMEM combos_etc[][3] = {
+const uint16_t PROGMEM combos_char[][3] = {
     {KC_T,   KC_G,    COMBO_END},
-    {KC_G,   KC_B,    COMBO_END},
+    {KC_AT,  KC_QUES, COMBO_END},
     {KC_Y,   KC_H,    COMBO_END},
-    {KC_Q,   KC_A,    COMBO_END},
+    {KC_HASH,KC_QUOT, COMBO_END},
+    {KC_Q,   KC_A,    COMBO_END}
+};
+const uint16_t PROGMEM combos_etc[][3] = {
+    {KC_G,   KC_B,    COMBO_END},
     {KC_P,   KC_SCLN, COMBO_END}
 };
 
@@ -75,11 +79,14 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lang[0],   KC_LNG1),
     COMBO(combos_lang[1],   KC_LNG2),
 
-    COMBO(combos_etc[0],    KC_UNDS),
-    COMBO(combos_etc[1],    KC_ESC),
-    COMBO(combos_etc[2],    KC_DQUO),
-    COMBO(combos_etc[3],    KC_GRV),
-    COMBO(combos_etc[4],    KC_DEL)
+    COMBO(combos_char[0],    KC_UNDS),
+    COMBO(combos_char[1],    KC_UNDS),
+    COMBO(combos_char[2],    KC_DQUO),
+    COMBO(combos_char[3],    KC_DQUO),
+    COMBO(combos_char[4],    KC_GRV),
+
+    COMBO(combos_etc[0],    KC_ESC),
+    COMBO(combos_etc[1],    KC_DEL)
 };
 
 bool caps_word_press_user(uint16_t keycode) {
