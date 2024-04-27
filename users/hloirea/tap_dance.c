@@ -38,7 +38,7 @@ uint8_t td_step(tap_dance_state_t *state) {
 #define HLOIREA_LAYER_FORMAT(LAYER, STRING)                             \
 void td_fn_L_##LAYER(tap_dance_state_t *state, void *user_data) {       \
     if (state->count >= 2) {                                            \
-        layer_move(L_##LAYER);                                          \
+        default_layer_set((layer_state_t)1 << L_##LAYER);               \
     }                                                                   \
 }
 HLOIREA_LAYER_LIST
