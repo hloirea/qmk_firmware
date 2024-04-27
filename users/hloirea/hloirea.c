@@ -52,6 +52,7 @@ const uint16_t PROGMEM combos_char[][3] = {
     {KC_HASH,KC_QUOT, COMBO_END},
     {KC_Q,   KC_A,    COMBO_END}
 };
+
 const uint16_t PROGMEM combos_etc[][3] = {
     {KC_G,   KC_B,    COMBO_END},
     {KC_P,   KC_SCLN, COMBO_END}
