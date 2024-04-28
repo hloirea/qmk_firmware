@@ -26,6 +26,6 @@ KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,
 
 #define HLOIREA_LAYER_MOUSE \
 XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
-TD(TD_L_MOUSE),   KC_BTN3,          KC_BTN2,          KC_BTN1,          XXXXXXX,          KC_BTN1,          KC_BTN2,          XXXXXXX,          XXXXXXX,          TD(TD_L_MOUSE),   \
+TD(TD_L_MOUSE),   XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_BTN1,          KC_BTN2,          KC_BTN3,          XXXXXXX,          TD(TD_L_MOUSE),   \
 U_P_UNDO,         U_P_CUT,          U_P_COPY,         U_P_PSTE,         U_P_REDO,         KC_WH_D,          KC_WH_U,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
-                                    KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
+                                    KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BTN4,          KC_BTN5
