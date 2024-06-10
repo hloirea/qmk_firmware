@@ -1,11 +1,11 @@
 #pragma once
 
-#define DEBOUNCE 12
+#define DEBOUNCE 5
 
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM 200
+#define TAPPING_TERM 175
 /* #define TAPPING_TERM_PER_KEY */
 
 /* Mode-Tap Setting */
