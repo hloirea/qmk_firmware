@@ -4,7 +4,6 @@
 
 #define HLOIREA_LAYER_LIST                 \
     HLOIREA_LAYER_FORMAT(BASE,  "Base ")   \
-    HLOIREA_LAYER_FORMAT(GAME,  "Game ")   \
     HLOIREA_LAYER_FORMAT(FUN,   "Func ")   \
     HLOIREA_LAYER_FORMAT(NAV,   "Nav  ")   \
     HLOIREA_LAYER_FORMAT(SYM,   "Sym  ")   \

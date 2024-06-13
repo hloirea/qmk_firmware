@@ -6,14 +6,8 @@ KC_A,             KC_S,             KC_D,             KC_F,             KC_G,   
 U_P_Z,            KC_X,             KC_C,             KC_V,             KC_B,             KC_N,             KC_M,             KC_COMM,          KC_DOT,           U_P_SLSH,         \
                                     U_P_TAB,          U_P_SPC,          U_P_P1,           U_P_P2,           U_P_BSPC,         U_P_ENT
 
-#define HLOIREA_LAYER_GAME \
-KC_Q,             KC_W,             KC_E,             KC_R,             KC_T,             KC_Y,             KC_U,             KC_I,             KC_O,             KC_P,             \
-KC_A,             KC_S,             KC_D,             KC_F,             KC_G,             KC_H,             KC_J,             KC_K,             KC_L,             KC_SCLN,          \
-U_P_Z,            KC_X,             KC_C,             KC_V,             KC_B,             KC_N,             KC_M,             KC_COMM,          KC_DOT,           U_P_SLSH,         \
-                                    KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    U_P_BSPC,         KC_ENT
-
 #define HLOIREA_LAYER_FUN \
-TD(TD_RESET),     TD(TD_L_GAME),    CW_TOGG,          KC_CAPS,          NK_TOGG,          KC_PSCR,          KC_F7,            KC_F8,            KC_F9,            KC_F12,           \
+TD(TD_RESET),     XXXXXXX,          CW_TOGG,          KC_CAPS,          NK_TOGG,          KC_PSCR,          KC_F7,            KC_F8,            KC_F9,            KC_F12,           \
 TD(TD_L_MOUSE),   TD(TD_L_SYM),     TD(TD_L_NAV),     TD(TD_L_FUN),     XXXXXXX,          KC_SCRL,          KC_F4,            KC_F5,            KC_F6,            KC_F11,           \
 U_P_UNDO,         U_P_CUT,          U_P_COPY,         U_P_PSTE,         U_P_REDO,         KC_PAUS,          KC_F1,            KC_F2,            KC_F3,            KC_F10,           \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
