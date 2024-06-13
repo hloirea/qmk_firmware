@@ -80,11 +80,11 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combos_lang[0],   KC_LNG1),
     COMBO(combos_lang[1],   KC_LNG2),
 
-    COMBO(combos_char[0],    KC_UNDS),
-    COMBO(combos_char[1],    KC_UNDS),
-    COMBO(combos_char[2],    KC_DQUO),
-    COMBO(combos_char[3],    KC_DQUO),
-    COMBO(combos_char[4],    KC_GRV),
+    COMBO(combos_char[0],   KC_UNDS),
+    COMBO(combos_char[1],   KC_UNDS),
+    COMBO(combos_char[2],   KC_DQUO),
+    COMBO(combos_char[3],   KC_DQUO),
+    COMBO(combos_char[4],   KC_GRV),
 
     COMBO(combos_etc[0],    KC_ESC),
     COMBO(combos_etc[1],    KC_DEL)
