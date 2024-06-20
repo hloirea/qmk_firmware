@@ -1,6 +1,6 @@
 #pragma once
 
-#define DEBOUNCE 5
+#define DEBOUNCE 25
 
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
@@ -39,6 +39,6 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-#define USB_POLLING_INTERVAL_MS 1
+#define FORCE_NKRO
 
 #define NO_USB_STARTUP_CHECK
