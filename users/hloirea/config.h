@@ -39,6 +39,7 @@
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
+#undef FORCE_NKRO
 #define FORCE_NKRO
 
 #define NO_USB_STARTUP_CHECK
