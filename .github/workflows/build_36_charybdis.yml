@@ -16,7 +16,7 @@ jobs:
       run : git config --global --add safe.directory '*'
 
     - name: Checkout QMK
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: hloirea/qmk_firmware
         ref: layout_36_charybdis
@@ -26,7 +26,7 @@ jobs:
       run: qmk compile -kb handwired/hloirea -km ${{ github.actor }}
 
     - name: Archive firmware
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       continue-on-error: true
       with:
         name: handwired_hloirea_${{ github.actor }}
