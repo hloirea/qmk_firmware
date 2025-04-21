@@ -3,7 +3,7 @@
 #define HLOIREA_LAYER_BASE \
 KC_Q,             KC_W,             KC_E,             KC_R,             KC_T,             KC_Y,             KC_U,             KC_I,             KC_O,             KC_P,             \
 KC_A,             KC_S,             KC_D,             KC_F,             KC_G,             KC_H,             KC_J,             KC_K,             KC_L,             KC_SCLN,          \
-U_P_Z,            KC_X,             KC_C,             KC_V,             KC_B,             KC_N,             KC_M,             KC_COMM,          KC_DOT,           U_P_SLSH,         \
+U_P_Z,            KC_X,             KC_C,             KC_V,             KC_B,             KC_N,             KC_M,             KC_COMM,          KC_DOT,           KC_SLSH,         \
                                     U_P_TAB,          U_P_SPC,          U_P_P1,           U_P_P2,           U_P_BSPC,         U_P_ENT
 
 #define HLOIREA_LAYER_FUN \
@@ -28,4 +28,4 @@ KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,
 XXXXXXX,          OSM(MOD_LGUI),    OSM(MOD_LSFT),    OSM(MOD_LALT),    XXXXXXX,          KC_BTN4,          KC_BTN5,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
 TD(TD_L_MOUSE),   XXXXXXX,          KC_BTN3,          KC_BTN2,          KC_BTN1,          KC_BTN1,          KC_BTN2,          KC_BTN3,          XXXXXXX,          TD(TD_L_MOUSE),   \
 U_P_UNDO,         U_P_CUT,          U_P_COPY,         U_P_PSTE,         U_P_REDO,         KC_WH_D,          KC_WH_U,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
-                                    KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
+                                    U_P_TAB,          KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
