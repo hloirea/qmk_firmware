@@ -14,7 +14,7 @@ KC_CAPS,          U_P_CUT,          U_P_COPY,         U_P_PSTE,         XXXXXXX,
 
 #define HLOIREA_LAYER_NAV \
 KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          KC_VOLU,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
-KC_LEFT,          KC_DOWN,          KC_RGHT,          KC_PGDN,          KC_VOLD,          XXXXXXX,          TD(TD_L_NAV),     TD(TD_L_FUN),     TD(TD_L_SYM),     TD(TD_L_MOUSE),   \
+KC_LEFT,          KC_DOWN,          KC_RGHT,          KC_PGDN,          KC_VOLD,          XXXXXXX,          TD(TD_L_NAV),     TD(TD_L_FUN),     TD(TD_L_SYM),     TD(TD_L_NUM),     \
 XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_MUTE,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
 
@@ -23,6 +23,12 @@ KC_TILD,          KC_CIRC,          KC_PIPE,          KC_AMPR,          KC_AT,  
 KC_EXLM,          KC_LABK,          KC_EQL,           KC_RABK,          KC_QUES,          KC_QUOT,          KC_4,             KC_5,             KC_6,             KC_DOT,           \
 KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_0,             KC_1,             KC_2,             KC_3,             KC_BSLS,          \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
+
+#define HLOIREA_LAYER_NUM \
+KC_TILD,          KC_CIRC,          KC_PIPE,          KC_AMPR,          KC_AT,            KC_NUM,           KC_P7,            KC_P8,            KC_P9,            KC_PAST,          \
+KC_EXLM,          KC_LABK,          KC_EQL,           KC_RABK,          KC_QUES,          KC_PMNS,          KC_P4,            KC_P5,            KC_P6,            KC_PPLS,          \
+KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_P0,            KC_P1,            KC_P2,            KC_P3,            KC_PSLS,          \
+                                    KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_PENT
 
 #define HLOIREA_LAYER_MOUSE \
 KC_BTN3,          KC_MS_U,          KC_BTN2,          KC_BTN1,          KC_WH_U,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          \
