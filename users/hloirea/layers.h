@@ -21,13 +21,13 @@ XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_MUTE,
 #define HLOIREA_LAYER_SYM \
 KC_TILD,          KC_CIRC,          KC_PIPE,          KC_AMPR,          KC_AT,            KC_HASH,          KC_7,             KC_8,             KC_9,             KC_DLR,           \
 KC_EXLM,          KC_LABK,          KC_EQL,           KC_RABK,          KC_QUES,          KC_QUOT,          KC_4,             KC_5,             KC_6,             KC_DOT,           \
-KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_0,             KC_1,             KC_2,             KC_3,             KC_PSLS,          \
+KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_0,             KC_1,             KC_2,             KC_3,             KC_BSLS,          \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_ENT
 
 #define HLOIREA_LAYER_NUM \
 KC_TILD,          KC_CIRC,          KC_PIPE,          KC_AMPR,          KC_AT,            KC_NUM,           KC_P7,            KC_P8,            KC_P9,            KC_PAST,          \
 KC_EXLM,          KC_LABK,          KC_EQL,           KC_RABK,          KC_QUES,          KC_PMNS,          KC_P4,            KC_P5,            KC_P6,            KC_PPLS,          \
-KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_P0,            KC_P1,            KC_P2,            KC_P3,            KC_BSLS,          \
+KC_SLSH,          KC_PLUS,          KC_MINS,          KC_ASTR,          KC_PERC,          KC_P0,            KC_P1,            KC_P2,            KC_P3,            KC_PSLS,          \
                                     KC_TAB,           KC_SPC,           TD(TD_L_BASE),    TD(TD_L_BASE),    KC_BSPC,          KC_PENT
 
 #define HLOIREA_LAYER_MOUSE \
