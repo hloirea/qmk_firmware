@@ -7,6 +7,7 @@
     HLOIREA_LAYER_FORMAT(FUN,   "Func ")   \
     HLOIREA_LAYER_FORMAT(NAV,   "Nav  ")   \
     HLOIREA_LAYER_FORMAT(SYM,   "Sym  ")   \
+    HLOIREA_LAYER_FORMAT(NUM,   "Num  ")   \
     HLOIREA_LAYER_FORMAT(MOUSE, "Mouse")   \
 
 #if 0 /* advanced tap dances is not currently in use */
